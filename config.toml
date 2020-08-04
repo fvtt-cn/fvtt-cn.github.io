@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://fvtt-cn.github.io/"
 title = "FoundryVTT 中文社区"
 
 enableRobotsTXT = true
