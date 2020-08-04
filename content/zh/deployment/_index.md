@@ -1,11 +1,11 @@
 ---
 title: "部署/安装"
 linkTitle: "💻 部署/安装"
-weight: 10
+weight: 11
 type: docs
 menu:
   main:
-    weight: 10
+    weight: 11
 ---
 
 {{% pageinfo %}}
