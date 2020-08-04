@@ -1,0 +1,59 @@
+//
+// Index page
+//
+
+.index-link-box a {
+    color: white;
+    text-decoration: $link-decoration;
+    background-color: transparent;
+  
+    @include hover {
+      text-decoration: underline;
+    }
+
+    @extend .text-center;
+}
+
+.index-link-logo-box a {
+    color: white;
+    
+    @include hover {
+        text-shadow: 0 0 5px #c7254e;
+        text-decoration: none;
+    }
+}
+
+.index-image-container {
+    color: #EEE;
+
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 0px;
+
+    border-radius: 0;
+
+    h1 {
+        font-size: 4em;
+        font-weight: 400;
+    }
+}
+
+.demo-container {
+    background: url('/images/index/incarnatesystem-min.png') no-repeat 50% 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center 36%;
+
+    @extend .index-image-container;
+}
+
+.module-container {
+    background: url('/images/index/background2-min.png') no-repeat 50% 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center 36%;
+
+    @extend .index-image-container;
+}
