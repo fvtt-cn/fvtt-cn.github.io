@@ -24,6 +24,6 @@ jobs:
         submodules: 'recursive'
 
     - name: Publish Site
-      uses: chabad360/hugo-gh-pages@master
+      uses: hmqgg/hugo-gh-pages@master
       with:
         githubToken: ${{ secrets.PERSONAL_TOKEN }}
