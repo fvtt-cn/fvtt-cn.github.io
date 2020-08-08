@@ -18,7 +18,7 @@ menu:
 
 [游戏系统/MOD 官方合集（内容可能来自第三方）](https://foundryvtt.com/packages/)
 
-## 如何使用国内镜像解决难以安装系统和 MOD 的问题？
+## 如何使用国内镜像解决系统和 MOD 难以安装的问题？
 
 众所周知，由于墙和出口带宽的原因，国内服务器或者国内无梯用户安装游戏系统和 MOD 时候的下载速度比较缓慢或者没有速度，表现出来的结果就是常常系统/MOD 安装失败。
 
@@ -33,3 +33,9 @@ menu:
 上述例子中，用此法修改，链接就会变为：`https://cdn.sbea.in/gitlab.com/foundrynet/dnd5e/raw/master/system.json`
 
 然后在 FVTT 中填写清单文件地址处，粘贴这个链接即可使用快速的国内镜像进行安装~
+
+### 请求同步新的 系统/MOD
+在 [GitHub 项目](https://github.com/fvtt-cn/AstralProjection/issues/new/choose)上提出新 issue，填写好 MOD 名称、项目地址、清单文件地址，即提出同步请求。
+
+### 支持国内镜像运营
+运营、维护国内镜像需要一定成本，如果愿意的话，可以在[爱发电](https://afdian.net/@mitch)上支持 FVTT-CN 的开发和维护。
