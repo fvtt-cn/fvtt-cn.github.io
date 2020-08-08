@@ -18,6 +18,12 @@ enableMissingTranslationPlaceholders = true
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+# Navigation
+[[menu.main]]
+  name = "❓ FAQ"
+  weight = 1
+  url ="/tutorial/faq"
+
 # Highlighting config
 pygmentsCodeFences = true
 pygmentsUseClasses = false
