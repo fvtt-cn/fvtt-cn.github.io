@@ -141,8 +141,8 @@ footer_about_disable = false
 [params.ui.feedback]
 enable = true
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-yes = '谢谢支持。请 <a href="https://github.com/fvtt-cn/fvtt.github.io/issues/new">告诉我们如何改进</a>.'
-no = '抱歉。方便的话，请 <a href="https://github.com/fvtt-cn/fvtt.github.io/issues/new">告诉我们如何改进</a>.'
+yes = '谢谢支持。请 <a href="https://github.com/fvtt-cn/fvtt-cn.github.io/issues/new">告诉我们如何改进</a>.'
+no = '抱歉。方便的话，请 <a href="https://github.com/fvtt-cn/fvtt-cn.github.io/issues/new">告诉我们如何改进</a>.'
 
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
