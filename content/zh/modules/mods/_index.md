@@ -1,5 +1,5 @@
 ---
-title: "社区 MOD"
+title: "社区 MOD 推荐"
 linkTitle: "社区 MOD"
 weight: 11
 type: docs
@@ -136,10 +136,79 @@ type: docs
 
 ---
 
+### Foundry Patrol
+- 作者：Jacob McAuley [JacobMcAuley#3461]（Discord 社区服）
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/JacobMcAuley/foundry-patrol)
+- [清单文件地址](https://github.com/JacobMcAuley/foundry-patrol/raw/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/github.com/JacobMcAuley/foundry-patrol/raw/master/module.json)
+#### 详情
+指示物可以设置自动巡逻，可以设定巡逻路径，指示物按照指定时间移动，并且可以设定遭遇后的交互。
+
+---
+
+### Turn Marker
+- 作者：Brunhine（GitHub 账户）
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/brunhine/turnmarker)
+- [清单文件地址](https://raw.githubusercontent.com/Brunhine/TurnMarker/master/src/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/Brunhine/TurnMarker/master/src/module.json)
+#### 详情
+战斗遭遇中，轮到的指示物的周围会亮起标记用于提示行动。
+
+---
+
 ## ❗ D&D5e 龙与地下城第五版专用 MOD
 > 以下是在 5e 游戏系统内运行的 MOD。这些 MOD 可能包含角色卡修改、定制规则、掷骰增强、自动计算等等。
 
 ---
 
+### Better Rolls for 5e
+- 作者：Red Reign#5128（Discord 社区服）
+- 系统兼容性：D&D5e
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/RedReign/FoundryVTT-BetterRolls5e)
+- [清单文件地址](https://raw.githubusercontent.com/RedReign/FoundryVTT-BetterRolls5e/master/betterrolls5e/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/RedReign/FoundryVTT-BetterRolls5e/master/betterrolls5e/module.json)
+#### 详情
+- 合并掷骰（掷攻击的同时掷伤害）
+- 同时掷双骰
+- 配置每项快速掷骰
+支持多种角色卡 MOD 上的快速掷骰。
+
+---
+
+### Chat Damage Buttons
+- 作者：hooking#0492（Discord 社区服）
+- 系统兼容性：D&D5e
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons)
+- [清单文件地址](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons/blob/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/hooking/foundry-vtt---chat-damage-buttons/blob/master/module.json)
+#### 详情
+修改了掷骰结果显示的聊天消息的右键菜单，并且添加了按钮，允许快速运用伤害、治疗结果等。
+
+---
+
 ### Dynamic Effects
-待施工
+- 作者：@tposney
+- 系统兼容性：通用（D&D5e 最佳）
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/tposney/dynamiceffects)
+- [清单文件地址](https://gitlab.com/tposney/dynamiceffects/raw/master/package/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/tposney/dynamiceffects/raw/master/package/module.json)
+#### 详情
+- 允许设置每件物品、法术等的效果。效果可以应用到自己或者目标的指示物上，实现诸如增减攻击/伤害加值，增减生命值上限，改变阵营，改变 AC 等等。角色卡上大部分数值都可以被 Dynamic Effects 调整。
+- 搭配 [About Time](#about-time)，实现效果持续时间，如一轮/一分钟后，效果自动消失等。
+- 搭配 [Minor QOL Improvements](#minor-qol-improvements) 等，实现更强的自动化处理。
+
+---
+
+更多 MOD 待施工
