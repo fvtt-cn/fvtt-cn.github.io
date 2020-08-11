@@ -5,6 +5,10 @@ weight: 11
 type: docs
 ---
 
+{{% alert title="注意" color="info" %}}
+以下列表并不包含所有 FVTT 可用的 MOD，仅是社区整理与推荐。
+{{% /alert %}}
+
 ## ❗ Foundry VTT 通用 MOD
 > 无关于游玩中的游戏系统，任何系统下都可以用的 MOD。这些 MOD 可能包含 UI 修改、增强功能等等。
 

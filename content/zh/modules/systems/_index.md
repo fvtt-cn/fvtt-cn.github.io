@@ -7,6 +7,11 @@ type: docs
 
 以下是非官方的游戏系统的列表：
 
+{{% alert title="注意" color="info" %}}
+以下列表并不包含所有 FVTT 可用的游戏系统，仅是社区整理与推荐。
+{{% /alert %}}
+
+
 ## Dungeons & Dragons 龙与地下城
 
 ### D&D5e 第五版
