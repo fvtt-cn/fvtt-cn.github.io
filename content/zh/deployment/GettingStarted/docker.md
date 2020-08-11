@@ -39,7 +39,7 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
     ```
     > 安装时会检查是否能获取 root 权限，并且如果没有安装 Docker 会自动安装 Docker
     > 
-    > 境内服务器安装 Docker 时会等待较长时间，可以耐心等待
+    > 境内服务器下载镜像时会等待较长时间，可以耐心等待
 
     然后脚本会提示输入参数，每条参数输入完成后回车即可，参数包含（✅：必需 | ⭕：可选）：
     ![](/images/deployment/docker-script-input.png)
