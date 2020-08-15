@@ -5,7 +5,7 @@ weight: 16
 type: docs
 ---
 
-这里介绍[雙月ひめは的 CentOS 教程](https://www.peatsuki.com/008.html)以及其[一键部署脚本教程](https://www.peatsuki.com/010.html)。
+> 这里介绍[雙月ひめは的 CentOS 教程](https://www.peatsuki.com/008.html)以及其[一键部署脚本教程](https://www.peatsuki.com/010.html)。
 
 ---
 
@@ -35,7 +35,7 @@ sh startfvtt.sh
 
 ### 使用脚本在阿里云 CentOS 机器上部署的教程视频
 
-{{< bilibili BV1Q54y1v7FX 500 >}}
+{{< bilibili BV1Q54y1v7FX >}}
 
 ## 手动部署
 
