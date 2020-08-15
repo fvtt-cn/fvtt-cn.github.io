@@ -16,6 +16,8 @@ menu:
 
 [官方更新日志（英文）](https://foundryvtt.com/releases/)
 
+部署完毕后，参见[使用教程](../tutorial)，了解如何设置并使用 Foundry VTT
+
 ## 部署方式很多，该如何选择?
 > 世界上并不存在完美的解决方案，只存在适合自己的。
 
