@@ -40,5 +40,7 @@ type: docs
 如果你和其他玩家无法通过互联网地址访问你的 FVTT，那么接下来需要构建虚拟局域网，或者使用内网穿透把端口转发到公网来让玩家可以访问，典型的解决方案如下：
 
 - [ZeroTier](../zerotier)：虚拟局域网
+- [蒲公英](https://pgy.oray.com/)：虚拟局域网（暂未提供教程）
 - [ngrok](https://ngrok.com/)：内网穿透（暂未提供教程）
 - [NATAPP](../natapp)：内网穿透
+- [花生壳](https://hsk.oray.com/)：内网穿透（暂未提供教程）
