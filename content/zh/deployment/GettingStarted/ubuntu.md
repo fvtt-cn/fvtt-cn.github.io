@@ -78,7 +78,7 @@ unzip FoundryVirtualTabletop-linux-x64.zip
 rm FoundryVirtualTabletop-linux-x64.zip
 ```
 
-然后测试确认 FVTT 是否能够正常运行：`node /home/[XXX]/foundry/resources/app/main.js --port=62621`
+然后测试确认 FVTT 是否能够正常运行：`node $HOME/foundry/resources/app/main.js --port=62621`
 ```bash
 FoundryVTT | 2020-07-06 07:48:44 | [info] Foundry Virtual Tabletop - Version 0.6.5
 FoundryVTT | 2020-07-06 07:48:44 | [info] Running on Node.js - Version 12.18.2
@@ -121,7 +121,7 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 
 使用 pm2 启动 FVTT，还是一样 `[xxx]` 替换为登录服务器使用的用户名：
 ```bash
-pm2 start "node /home/[XXX]/foundry/resources/app/main.js" --name "foundry" -- --port=8080
+pm2 start "node $HOME/foundry/resources/app/main.js" --name "foundry" -- --port=8080
 ```
 
 > 端口号`8080`可以调整，但是后续的端口号都需要对应修改。

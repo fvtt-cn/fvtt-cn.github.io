@@ -1,5 +1,5 @@
 ---
-title: "域名购买、绑定"
+title: "域名购买/绑定指南"
 linkTitle: "域名使用指南"
 weight: 6
 type: docs
