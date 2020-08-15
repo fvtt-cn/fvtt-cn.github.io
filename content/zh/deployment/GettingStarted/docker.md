@@ -61,7 +61,7 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
 4. 部署完成后，脚本会提示如何访问 FVTT，如图所示：
 ![](/images/deployment/docker-script-result.png)
 
-> 如上图所示的部署完毕后，如果还是不能访问 FVTT，请参见 FAQ 中的[无法连接](../../../faq#为什么显示安装成功后仍然无法连接-foundryvtt)的问题
+> 如上图所示的部署完毕后，如果还是不能访问 FVTT，请参见 FAQ 中的[无法连接](../../../tutorial/faq#为什么显示安装成功后仍然无法连接-foundryvtt)的问题
 
 {{% alert title="Tips" color="info" %}}
 升级 FVTT 或者修改启动配置，请参见[脚本仓库](https://github.com/fvtt-cn/FoundryDeploy)中的文档
