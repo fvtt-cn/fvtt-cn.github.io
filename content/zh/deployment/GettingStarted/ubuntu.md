@@ -24,7 +24,7 @@ Ubuntu 服务器上运行 FVTT，需要配置好运行环境：
 - Node.js 运行时，其对应的软件包管理器 npm，以及使用 npm 安装的 pm2（进程管理工具）
 - 反向代理软件 Caddy，以及其暴露端口的防火墙（比如 80、443）
 
-首先，假设已经登入了 Ubuntu Server 服务器，并且能够获得 root 权限
+首先，假设已经登入了 Ubuntu Server 服务器，并且能够获得 root 权限。
 
 ### 第一步：安装 Node.js, npm 和 Unzip
 
@@ -43,14 +43,8 @@ echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | sudo tee -a /etc/apt/sou
 sudo apt update
 sudo apt install caddy
 ```
-接下来将 Caddy 设置为系统服务：
+以上命令将会同时创建用于启动 Caddy 的 Linux 用户和用户组，接下来启用 Caddy 服务：
 ```bash
-sudo groupadd --system caddy
-sudo useradd --system --gid caddy --create-home --home-dir /var/lib/caddy --shell /usr/sbin/nologin --comment "Caddy web server" caddy
-```
-以上命令将会创建用于启动 Caddy 的 Linux 用户和用户组，接下来将设置好服务：
-```bash
-sudo wget -O /etc/systemd/system/caddy.service https://github.com/caddyserver/dist/raw/master/init/caddy.service
 sudo systemctl enable caddy
 ```
 
@@ -88,6 +82,7 @@ FoundryVTT | 2020-07-06 07:48:44 | [info] Running on Node.js - Version 12.18.2
 FoundryVTT | 2020-07-06 07:48:44 | [info] Application Options:
 {
   "port": 62621,
+  "dataPath": "/tmp/foundrydata",
   "upnp": false,
   "fullscreen": false,
   "hostname": null,
@@ -127,7 +122,7 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 
 使用 pm2 启动 FVTT，还是一样 `[xxx]` 替换为登录服务器使用的用户名：
 ```bash
-pm2 start "node $HOME/foundry/resources/app/main.js" --name "foundry" -- --port=8080 --dataPath=$HOME/foundrydata
+pm2 start $HOME/foundry/resources/app/main.js --name foundry -- --port=8080 --dataPath=$HOME/foundrydata
 ```
 
 > 端口号`8080`可以调整，但是后续的端口号都需要对应修改。
@@ -139,7 +134,7 @@ pm2 start "node $HOME/foundry/resources/app/main.js" --name "foundry" -- --port=
 ┌──────────┬────┬─────────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬────────┬──────────┐
 │ App name │ id │ version │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem       │ user   │ watching │
 ├──────────┼────┼─────────┼──────┼───────┼────────┼─────────┼────────┼─────┼───────────┼────────┼──────────┤
-│ foundry  │ 0  │ 0.3.2   │ fork │ 31130 │ online │ 0       │ 0s     │ 0%  │ 8.9 MB    │ [XXX]  │ disabled │
+│ foundry  │ 0  │ 0.6.5   │ fork │ 31130 │ online │ 0       │ 0s     │ 0%  │ 8.9 MB    │ [XXX]  │ disabled │
 └──────────┴────┴─────────┴──────┴───────┴────────┴─────────┴────────┴─────┴───────────┴────────┴──────────┘
  Use `pm2 show <id|name>` to get more details about an app
 ```
