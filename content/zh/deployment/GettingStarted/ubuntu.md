@@ -30,8 +30,8 @@ Ubuntu 服务器上运行 FVTT，需要配置好运行环境：
 
 运行下面命令（适用于 Ubuntu，其他 Linux 发行版使用的命令可能不一致）：
 ```bash
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
-sudo apt-get install -y nodejs unzip
+curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+sudo apt install -y nodejs unzip
 ```
 以上命令会安装 node.js 以及包管理器 npm。使用 `node --version` 和 `npm --version` 来确认安装是否成功以及版本号。
 
@@ -39,7 +39,9 @@ sudo apt-get install -y nodejs unzip
 
 运行以下命令将会安装 Caddy：
 ```bash
-curl -fsSL https://github.com/caddyserver/getcaddy.com/raw/master/index.txt | sudo bash
+echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | sudo tee -a /etc/apt/sources.list.d/caddy-fury.list
+sudo apt update
+sudo apt install caddy
 ```
 接下来将 Caddy 设置为系统服务：
 ```bash
@@ -61,6 +63,7 @@ sudo npm install -g pm2
 ### 第四步：下载 FVTT 并测试
 创建 FVTT 使用的目录并切换：
 ```bash
+mkdir /tmp/foundrydata && mkdir ~/foundrydata
 mkdir ~/foundry && cd ~/foundry
 pwd
 ```
@@ -68,7 +71,7 @@ pwd
 
 从官网上获取 FVTT 下载链接（Linux），在服务器上运行：
 ```bash
-wget https://foundryvtt.s3-us-west-2.amazonaws.com/releases/[Key]/FoundryVirtualTabletop-linux-x64.zip
+wget "https://foundryvtt.s3-us-west-2.amazonaws.com/releases/[Key]/FoundryVirtualTabletop-linux-x64.zip"
 ```
 **后面的这段链接替换为从官网处复制到的链接**
 
@@ -78,7 +81,7 @@ unzip FoundryVirtualTabletop-linux-x64.zip
 rm FoundryVirtualTabletop-linux-x64.zip
 ```
 
-然后测试确认 FVTT 是否能够正常运行：`node $HOME/foundry/resources/app/main.js --port=62621`
+然后测试确认 FVTT 是否能够正常运行：`node $HOME/foundry/resources/app/main.js --port=62621 --dataPath=/tmp/foundrydata`
 ```bash
 FoundryVTT | 2020-07-06 07:48:44 | [info] Foundry Virtual Tabletop - Version 0.6.5
 FoundryVTT | 2020-07-06 07:48:44 | [info] Running on Node.js - Version 12.18.2
@@ -111,6 +114,9 @@ FoundryVTT | 2020-07-06 07:48:44 | [info] Application Options:
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u [XXX] --hp /home/[XXX]
 ```
 它生成了一个命令，即`sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u [XXX] --hp /home/[XXX]`这一部分，其中 `[XXX]` 会被自动替换为当前登录使用的用户。复制输出的这段命令（而非从网页上复制）并且执行：
+
+> 如果使用 root 执行 `pm2 startup` 命令，则会直接配置为系统服务，不需要复制粘贴命令执行。
+
 ```bash
 [PM2] [v] Command successfully executed.
 ```
@@ -121,7 +127,7 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 
 使用 pm2 启动 FVTT，还是一样 `[xxx]` 替换为登录服务器使用的用户名：
 ```bash
-pm2 start "node $HOME/foundry/resources/app/main.js" --name "foundry" -- --port=8080
+pm2 start "node $HOME/foundry/resources/app/main.js" --name "foundry" -- --port=8080 --dataPath=$HOME/foundrydata
 ```
 
 > 端口号`8080`可以调整，但是后续的端口号都需要对应修改。
