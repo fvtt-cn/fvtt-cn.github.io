@@ -45,7 +45,7 @@ type: docs
 ### Calendar/Weather
 - 作者：Michael Sebelski [DasSauerkraut#3215]（Discord 社区服）
 - 系统兼容性：通用
-- MOD 兼容性：需提前安装 [about-time](#about-time)
+- MOD 兼容性：依赖于 [about-time](#about-time)
 #### 链接
 - [项目地址](https://github.com/DasSauerkraut/calendar-weather)
 - [清单文件地址](https://raw.githubusercontent.com/DasSauerkraut/calendar-weather/master/package/module.json)
@@ -164,6 +164,18 @@ type: docs
 
 ## ❗ D&D5e 龙与地下城第五版专用 MOD
 > 以下是在 5e 游戏系统内运行的 MOD。这些 MOD 可能包含角色卡修改、定制规则、掷骰增强、自动计算等等。
+
+---
+
+### 5e 中文化
+- 作者：xtlcme
+- 系统兼容性：D&D5e
+- MOD 兼容性：依赖于 [Babele](#babele)
+#### 链接
+- [项目地址](https://gitlab.com/xtlcme/foundry-vtt-dnd5e-chn)
+- [清单文件地址](https://gitlab.com/xtlcme/foundry-vtt-dnd5e-chn/raw/master/dnd5e_cn/module.json)
+#### 详情
+翻译了 5e 系统的大部分内容，同时整合了大量 5e 合集包资源方便直接开始游玩（需要开启 Babele）。
 
 ---
 
