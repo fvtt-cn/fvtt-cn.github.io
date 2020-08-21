@@ -40,4 +40,4 @@ FoundryVTT | 2020-08-15 14:50:37 | [info] Running on Node.js - Version 14.8.0
 
 > 从 26:12 秒开始是部署过程
 
-{{< bilibili BV1gE411A7c4 0h26m12s >}}
+{{< bilibili BV1gE411A7c4 >}}
