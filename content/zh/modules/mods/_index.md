@@ -67,8 +67,8 @@ type: docs
 通称为 CUB，功能丰富且支持多种游戏系统，详细功能可以参见项目地址。
 目前可使用和配置的功能有：
 - 自动分配 XP
-- 自动专注检定（依赖于游戏系统）
-- 增强的角色状态
+- 自动专注检定（依赖于游戏系统，比如 5e 的专注）
+- 增强的角色状态（比如内置了 5e 的状态）
 - 隐藏 NPC 名字
 - 标记受伤、死亡
 - 强力召唤者（德鲁伊-孢子结社职业特性）支持（D&D5e）
@@ -159,68 +159,3 @@ type: docs
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/Brunhine/TurnMarker/master/src/module.json)
 #### 详情
 战斗遭遇中，轮到的指示物的周围会亮起标记用于提示行动。
-
----
-
-## ❗ D&D5e 龙与地下城第五版专用 MOD
-> 以下是在 5e 游戏系统内运行的 MOD。这些 MOD 可能包含角色卡修改、定制规则、掷骰增强、自动计算等等。
-
----
-
-### 5e 中文化
-- 作者：xtlcme
-- 系统兼容性：D&D5e
-- MOD 兼容性：依赖于 [Babele](#babele)
-#### 链接
-- [项目地址](https://gitlab.com/xtlcme/foundry-vtt-dnd5e-chn)
-- [清单文件地址](https://gitlab.com/xtlcme/foundry-vtt-dnd5e-chn/raw/master/dnd5e_cn/module.json)
-#### 详情
-翻译了 5e 系统的大部分内容，同时整合了大量 5e 合集包资源方便直接开始游玩（需要开启 Babele）。
-
----
-
-### Better Rolls for 5e
-- 作者：Red Reign#5128（Discord 社区服）
-- 系统兼容性：D&D5e
-- MOD 兼容性：无已知冲突
-#### 链接
-- [项目地址](https://github.com/RedReign/FoundryVTT-BetterRolls5e)
-- [清单文件地址](https://raw.githubusercontent.com/RedReign/FoundryVTT-BetterRolls5e/master/betterrolls5e/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/RedReign/FoundryVTT-BetterRolls5e/master/betterrolls5e/module.json)
-#### 详情
-- 合并掷骰（掷攻击的同时掷伤害）
-- 同时掷双骰
-- 配置每项快速掷骰
-支持多种角色卡 MOD 上的快速掷骰。
-
----
-
-### Chat Damage Buttons
-- 作者：hooking#0492（Discord 社区服）
-- 系统兼容性：D&D5e
-- MOD 兼容性：无已知冲突
-#### 链接
-- [项目地址](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons)
-- [清单文件地址](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons/blob/master/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/hooking/foundry-vtt---chat-damage-buttons/blob/master/module.json)
-#### 详情
-修改了掷骰结果显示的聊天消息的右键菜单，并且添加了按钮，允许快速运用伤害、治疗结果等。
-
----
-
-### Dynamic Effects
-- 作者：@tposney
-- 系统兼容性：通用（D&D5e 最佳）
-- MOD 兼容性：无已知冲突
-#### 链接
-- [项目地址](https://gitlab.com/tposney/dynamiceffects)
-- [清单文件地址](https://gitlab.com/tposney/dynamiceffects/raw/master/package/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/tposney/dynamiceffects/raw/master/package/module.json)
-#### 详情
-- 允许设置每件物品、法术等的效果。效果可以应用到自己或者目标的指示物上，实现诸如增减攻击/伤害加值，增减生命值上限，改变阵营，改变 AC 等等。角色卡上大部分数值都可以被 Dynamic Effects 调整。
-- 搭配 [About Time](#about-time)，实现效果持续时间，如一轮/一分钟后，效果自动消失等。
-- 搭配 [Minor QOL Improvements](#minor-qol-improvements) 等，实现更强的自动化处理。
-
----
-
-更多 MOD 待施工
