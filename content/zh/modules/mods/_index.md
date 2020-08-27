@@ -215,6 +215,21 @@ type: docs
 
 ---
 
+### Music Assit
+- 作者：temportalflux#3142（Discord 社区服）
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/temportalflux/MusicAssist)
+- [清单文件地址](https://raw.githubusercontent.com/temportalflux/MusicAssist/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/temportalflux/MusicAssist/master/module.json)
+#### 详情
+支持输入 Youtube 网址作为音乐播放源，无需下载音频到服务器，节约下载时间和存储空间。
+
+每位玩家需要能够连接到 Youtube 才能听到 从 Youtube 串流的音乐。
+
+---
+
 ### Parallaxia
 - 作者：Wonko
 - 系统兼容性：通用
@@ -254,6 +269,19 @@ type: docs
 
 ---
 
+### Response Times
+- 作者：Tenuki
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/tenuki.igo/foundryvtt-ping-times)
+- [清单文件地址](https://gitlab.com/tenuki.igo/foundryvtt-ping-times/-/raw/master/dist/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/tenuki.igo/foundryvtt-ping-times/-/raw/master/dist/module.json)
+#### 详情
+在左下角玩家栏中显示每一个玩家的 Ping 值（响应时间），方便确认网络情况，尤其适合跨境连接的网络和 P2P 玩家使用。
+
+---
+
 ### Token Action HUD
 - 作者：^ and stick#0520（Discord 社区服）
 - 系统兼容性：通用
@@ -264,6 +292,19 @@ type: docs
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/github.com/espositos/fvtt-tokenactionhud/raw/master/module.json)
 #### 详情
 选中一个指示物时，左上角会显示一个动作栏，包含这个角色可以执行的动作、检定的能力以及其他物品和通用项目等。可以配置位置、功能并且为每个玩家配置可用权限。
+
+---
+
+### Token Info Icons
+- 作者：ChalkOne#0156（Discord 社区服）
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/jopeek/fvtt-token-info-icons)
+- [清单文件地址](https://raw.githubusercontent.com/jopeek/fvtt-token-info-icons/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/jopeek/fvtt-token-info-icons/master/module.json)
+#### 详情
+GM 右键指示物时，显示其速度、 AC、被动感知。 
 
 ---
 
