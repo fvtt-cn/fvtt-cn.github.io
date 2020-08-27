@@ -224,9 +224,9 @@ type: docs
 - [清单文件地址](https://raw.githubusercontent.com/temportalflux/MusicAssist/master/module.json)
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/temportalflux/MusicAssist/master/module.json)
 #### 详情
-支持输入 Youtube 网址作为音乐播放源，无需下载音频到服务器，节约下载时间和存储空间。
+支持输入 Youtube 网址或音乐文件直链作为音乐播放源，无需下载音频到服务器，节约管理音乐文件的时间、存储空间以及服务器带宽。
 
-每位玩家需要网络能够连接到 Youtube 才能听到从 Youtube 串流的音乐。
+每位玩家需要网络能够连接到 Youtube 或者音乐文件的直链才能听到串流的音乐。
 
 ---
 
