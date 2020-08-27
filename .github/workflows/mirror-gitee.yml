@@ -1,0 +1,16 @@
+name: Mirror to Gitee Repo
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on: page_build
+
+jobs:
+  git-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.MIRROR_SSH_PRIVATE_KEY }}
+        with:
+          source-repo: 'git@github.com:fvtt-cn/fvtt-cn.github.io.git'
+          destination-repo: 'git@gitee.com:fvtt-cn/fvtt-cn.git'
