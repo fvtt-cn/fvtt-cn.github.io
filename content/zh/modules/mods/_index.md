@@ -14,6 +14,19 @@ type: docs
 
 ---
 
+### 核心系统中文化
+- 作者：xtlcme
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/xtlcme/foundry-vtt-chn)
+- [清单文件地址](https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
+#### 详情
+提供对 FVTT 核心内容的中文化翻译。
+
+---
+
 ### About Time
 - 作者：@tposney
 - 系统兼容性：通用
@@ -52,6 +65,20 @@ type: docs
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/DasSauerkraut/calendar-weather/master/package/module.json)
 #### 详情
 游戏内实现日历、事件、时钟记录和显示功能，内置多种历法，比如现实的格里高利历、被遗忘的国度的哈普托斯历、灰鹰历等等，也支持自定义历法，设置年月日和星期。
+
+---
+
+### Combat Enhancements
+- 作者：Asacolips
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/asacolips-projects/foundry-mods/combat-enhancements)
+- [清单文件地址](https://gitlab.com/asacolips-projects/foundry-mods/combat-enhancements/raw/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/asacolips-projects/foundry-mods/combat-enhancements/raw/master/module.json)
+#### 详情
+- 在战斗追踪器中直接用环状 HP 条显示对应角色、NPC 的 HP 值，可以设置显示哪些以及查看权限
+- 可以直接用拖拽的方式修改先攻顺序
 
 ---
 
@@ -146,6 +173,86 @@ type: docs
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/github.com/JacobMcAuley/foundry-patrol/raw/master/module.json)
 #### 详情
 指示物可以设置自动巡逻，可以设定巡逻路径，指示物按照指定时间移动，并且可以设定遭遇后的交互。
+
+---
+
+### Grid Scaler
+- 作者：UberV
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/UberV/scaleGridl)
+- [清单文件地址](https://raw.githubusercontent.com/UberV/scaleGrid/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/UberV/scaleGrid/master/module.json)
+#### 详情
+在左侧提供一个新的扳手图标用于开启 Grid Scaler 的缩放功能，可以快捷的手动/自动重设地图网格大小、自动网格对齐、手动调整横竖轴偏移量、按图片网格重设网格等等，同样支持六边形网格。
+
+---
+
+### Health Estimate
+- 作者：Shylight
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/tsuki.no.mai/healthestimate/)
+- [清单文件地址](https://gitlab.com/tsuki.no.mai/healthestimate/-/raw/master/dist/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/tsuki.no.mai/healthestimate/-/raw/master/dist/module.json)
+#### 详情
+可以展示敌人、NPC 或玩家的估计的生命值水平，当鼠标悬停时显示在指示物上方，类似于博德之门游戏的显示。支持大部分游戏系统，并且可以自定义显示文字和级数。
+
+---
+
+### Multilevel Tokens
+- 作者：grandseiken
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/grandseiken/foundryvtt-multilevel-tokens)
+- [清单文件地址](https://raw.githubusercontent.com/grandseiken/foundryvtt-multilevel-tokens/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/grandseiken/foundryvtt-multilevel-tokens/master/module.json)
+#### 详情
+实现高度、楼层功能，比如从楼上可以看到楼下的指示物且实时同步，同时也可以用来做上下楼梯和传送等功能。
+
+---
+
+### Parallaxia
+- 作者：Wonko
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/reichler/parallaxia)
+- [清单文件地址](https://gitlab.com/reichler/parallaxia/raw/master/parallaxia/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/reichler/parallaxia/raw/master/parallaxia/module.json)
+#### 详情
+令图块可以进行平移、缩放等多种动画效果，构建视差等效果。提供非常简单的方式制作动态地图，比如两条龙在峡谷中飞过的空战地图等。
+
+---
+
+### Pings
+- 作者：Azzurite
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/foundry-azzurite/pings)
+- [清单文件地址](https://gitlab.com/foundry-azzurite/pings/raw/master/src/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/foundry-azzurite/pings/raw/master/src/module.json)
+#### 详情
+使 GM 或 PL 可以在地图上 Ping 一个点，让所有人看见以便指示。默认是长按鼠标左键 Ping，按住 Shift 长按鼠标左键将所有人的屏幕移动到你 Ping 的点。支持配置权限、按键和延时。
+
+---
+
+### Trigger Happy
+- 作者：KaKaRoTo#4756（Discord 社区服）
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/kakaroto/fvtt-module-trigger-happy)
+- [清单文件地址](https://raw.githubusercontent.com/kakaroto/fvtt-module-trigger-happy/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/kakaroto/fvtt-module-trigger-happy/master/module.json)
+#### 详情
+Trigger Happy 给 FVTT 添加了简单实用的创建触发器和事件自动化的功能，被 The Forge 用来制作交互式的 FVTT 使用教程。
+
+可以相对方便的实现传送门、陷阱、靠近对话、自动门、限制移动等等。
 
 ---
 
