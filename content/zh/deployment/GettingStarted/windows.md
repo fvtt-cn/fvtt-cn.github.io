@@ -20,7 +20,7 @@ type: docs
 2. 将 Node.js 安装包通过 *远程桌面* 复制到服务器上，然后在服务器上点击安装包文件，一路确认，安装 Node.js
 3. 从 [Foundry VTT 官网](https://foundryvtt.com/)上下载最新包，使用 Node.js 部署，所以选择第四项
     - ![](/images/deployment/download-url.png)
-4. 将压缩包通过 *远程桌面* 复制到服务器上，直接拖拽或者 <kbd>Ctrl+C/V</kbd> 均可，然后解压到某文件夹内（比如桌面）
+4. 将压缩包通过 *远程桌面* 复制到服务器上，直接拖拽或者 <kbd>Ctrl</kbd>+<kbd>C/V</kbd> 均可，然后解压到某文件夹内（比如桌面）
 5. 在这个目录下，启动 CMD。如图所示，在资源管理器地址栏下输入 `cmd`，然后回车打开 CMD 窗口
     - ![](/images/deployment/win-unzip-cmd.png)
 6. 接着运行这个命令

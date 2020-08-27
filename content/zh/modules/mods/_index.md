@@ -159,7 +159,7 @@ type: docs
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/bitbucket.org/Fyorl/easy-target/raw/master/module.json)
 #### 详情
 方便快速选择/取消目标，按住 <kbd>Alt</kbd> 键时，选择任意一个指示物就可以选择目标，可以连选。
-按下 <kbd>Alt+Shift+c</kbd>，清除所有选择的目标。
+按下 <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>，清除所有选择的目标。
 
 ---
 
@@ -238,6 +238,32 @@ type: docs
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/foundry-azzurite/pings/raw/master/src/module.json)
 #### 详情
 使 GM 或 PL 可以在地图上 Ping 一个点，让所有人看见以便指示。默认是长按鼠标左键 Ping，按住 Shift 长按鼠标左键将所有人的屏幕移动到你 Ping 的点。支持配置权限、按键和延时。
+
+---
+
+### Quick Insert
+- 作者：Sunspots
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://gitlab.com/fvtt-modules-lab/quick-insert)
+- [清单文件地址](https://gitlab.com/fvtt-modules-lab/quick-insert/-/jobs/artifacts/master/raw/module.json?job=build-module)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/fvtt-modules-lab/quick-insert/-/jobs/artifacts/master/raw/module.json)
+#### 详情
+按下 <kbd>Ctrl</kbd>+<kbd>Space</kbd> 唤出快速搜索栏，可以在搜索栏里搜索几乎一切当前世界里的内容，包括角色、日志、合集、场景等等，并且提供自动补全，以便快速输入和找到结果，搜索结果可以直接被拖拽使用。
+
+---
+
+### Token Action HUD
+- 作者：^ and stick#0520（Discord 社区服）
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/espositos/fvtt-tokenactionhud)
+- [清单文件地址](https://github.com/espositos/fvtt-tokenactionhud/raw/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/github.com/espositos/fvtt-tokenactionhud/raw/master/module.json)
+#### 详情
+选中一个指示物时，左上角会显示一个动作栏，包含这个角色可以执行的动作、检定的能力以及其他物品和通用项目等。可以配置位置、功能并且为每个玩家配置可用权限。
 
 ---
 
