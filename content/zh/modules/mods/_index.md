@@ -215,7 +215,7 @@ type: docs
 
 ---
 
-### Music Assit
+### Music Assist
 - 作者：temportalflux#3142（Discord 社区服）
 - 系统兼容性：通用
 - MOD 兼容性：无已知冲突
@@ -226,7 +226,7 @@ type: docs
 #### 详情
 支持输入 Youtube 网址作为音乐播放源，无需下载音频到服务器，节约下载时间和存储空间。
 
-每位玩家需要能够连接到 Youtube 才能听到 从 Youtube 串流的音乐。
+每位玩家需要网络能够连接到 Youtube 才能听到从 Youtube 串流的音乐。
 
 ---
 
