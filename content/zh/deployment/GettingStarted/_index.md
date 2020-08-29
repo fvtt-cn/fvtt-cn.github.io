@@ -5,16 +5,10 @@ weight: 1
 type: docs
 ---
 
-[官方教程（英文）](https://foundryvtt.com/article/tutorial/)
-
-[官方更新日志（英文）](https://foundryvtt.com/releases/)
-
----
-
 通常而言，服务器部署按以下流程进行：
 1. [挑选、购买云服务器](cloud/#选购建议)
-2. 如果使用域名：购买域名，并将[域名绑定](domain-name)在服务器上
-3. 登入服务器，开始部署 FVTT
+2. *如果使用域名*：购买域名，并将[域名绑定](domain-name)在服务器上
+3. 登入服务器，开始部署 FVTT（参见下列方法）
 4. 如果部署完成后无法打开：[检查云服务器防火墙设置](cloud/#部署完毕后无法访问)
 
 ## 服务器部署方式对比
