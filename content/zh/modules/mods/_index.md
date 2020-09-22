@@ -108,6 +108,19 @@ type: docs
 
 ---
 
+### Compendium Folders
+- 作者：earlSt1
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/earlSt1/vtt-compendium-folders)
+- [清单文件地址](https://raw.githubusercontent.com/earlSt1/vtt-compendium-folders/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/earlSt1/vtt-compendium-folders/master/module.json)
+#### 详情
+支持合集文件夹，方便管理合集。支持文件夹嵌套，文件夹拖拽以及导入/导出合集文件夹配置。
+
+---
+
 ### Deselection
 - 作者：Sky#9435, KaKaRoTo#4756（Discord 社区服）
 - 系统兼容性：通用
