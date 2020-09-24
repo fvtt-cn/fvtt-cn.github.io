@@ -14,14 +14,15 @@ type: docs
 ```bash
 sudo su root
 cd
-wget https://www.peatsuki.com/sh/InstallFVTT.sh --no-check-certificate
+wget https://sh.peatsuki.com/fvtt/InstallFVTT.sh --no-check-certificate
 sh InstallFVTT.sh
 ```
-[官网地址](https://foundryvtt.com/) 登录以购买的账户以获取下载链接。
+~~[官网地址](https://foundryvtt.com/) 登录以购买的账户以获取下载链接。~~
+现无需输入官网地址，已经重定向到镜像，但仍需要登入官网购买licence以便激活系统
 
-然后再选择后台模式中输入 `非【P】 以nohup进行后台运行`。
+安装过程中需要中输入非【P】的任意字符选择 `以nohup进行后台运行`。
 
-若需要使用 PM2，需要有足够的基本知识方可使用。
+若需要使用 PM2 作为后台监视程序，建议有足够的OPS知识后进行选择。
 
 如需上传文件，需要设置 root 账号密码后使用 SFTP 工具上传，例如 WinSCP 等。
 
