@@ -11,7 +11,7 @@ type: docs
 
 如果你没有公网 IP，又不缺一台服务器的钱，那么你可以考虑租一台服务器并架设一个 FoundryVTT 在上面。
 
-服务器有数种系统，例如 Windows、Linux、MacOS、Ubantu 等。本教程以 Windows 系统为例。
+服务器有数种系统，例如 Windows、Linux、MacOS、Ubuntu 等。本教程以 Windows 系统为例。
 
 那么我们假设你已经购买了服务器，并且安装好了 Windows Server 系统，连接上了**远程桌面**，接下来就进行部署：
 
