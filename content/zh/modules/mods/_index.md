@@ -15,13 +15,13 @@ type: docs
 ---
 
 ### 核心系统中文化
-- 作者：xtlcme
+- 作者：FVTT-CN
 - 系统兼容性：通用
 - MOD 兼容性：无已知冲突
 #### 链接
-- [项目地址](https://gitlab.com/xtlcme/foundry-vtt-chn)
-- [清单文件地址](https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
+- [项目地址](https://github.com/fvtt-cn/foundry_chn)
+- [清单文件地址](https://raw.githubusercontent.com/fvtt-cn/foundry_chn/main/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/fvtt-cn/foundry_chn/main/module.json)
 #### 详情
 提供对 FVTT 核心内容的中文化翻译。
 
