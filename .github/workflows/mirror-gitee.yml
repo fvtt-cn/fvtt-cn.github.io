@@ -22,3 +22,4 @@ jobs:
           gitee-username: ${{ secrets.GITEE_USERNAME }}
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           gitee-repo: fvtt-cn/fvtt-cn
+          branch: gh-pages
