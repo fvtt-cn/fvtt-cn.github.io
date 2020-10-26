@@ -5,7 +5,7 @@ weight: 21
 type: docs
 ---
 
-Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些实现中，较为推荐 [felddy/foundryvtt](https://github.com/felddy/foundryvtt-docker) 的镜像。
+Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些实现中，较为推荐 [felddy/foundryvtt](https://github.com/felddy/foundryvtt-docker) 的镜像，而使用该教程中提供的 Linux 自动部署脚本，可以简化操作，自动部署，无需学习 Docker 的使用和管理。
 
 ## 介绍
 
@@ -15,7 +15,7 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
 
 ### 使用 Docker 的优点
 - 无需关心系统环境：只要是主流发行版的 Linux，甚至于 Windows 服务器，只要安装了 Docker，即和其他用户的部署行为一致，难以因系统环境问题出错
-- 直接使用 Docker 的后台管理：Docker 自己会监控容器内运行的进程状态、网站可访问状态，如果意外情况导致 FVTT 崩溃或无法访问，可以不需要 pm2 等进程监控工具即可自动重启、还原
+- 直接使用 Docker 的后台管理：Docker 自己会监控容器内运行的进程状态、网站可访问状态，如果意外情况导致 FVTT 崩溃或无法访问，可以不需要使用 pm2 等进程监控工具即可自动重启、还原
 - 目前主流的 FVTT 的 Docker 镜像包含内置的自动获取下载地址和授权的脚本，可以简化部署流程
 - ...
 
@@ -44,7 +44,7 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
     然后脚本会提示输入参数，每条参数输入完成后回车即可，参数包含（✅：必需 | ⭕：可选）：
     ![](/images/deployment/docker-script-input.png)
     - ✅ FVTT 账号
-    - ✅ FVTT 密码
+    - ✅ FVTT 密码 （用于获取 FVTT 下载地址/授权信息）
     - ⭕ 版本号/下载地址
         - 直接回车跳过输入版本号，使用最新稳定版即可；注意：如果使用境内服务器，从 FVTT 官方下载安装包可能较慢，可以考虑粘贴星界投影的镜像下载源的 Linux 版本下载链接
     - ⭕ 自定义管理密码
@@ -66,5 +66,29 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
 > 如上图所示的部署完毕后，如果还是不能访问 FVTT，请参见 FAQ 中的[无法连接](../../../tutorial/faq#为什么显示安装成功后仍然无法连接-foundryvtt)的问题
 
 {{% alert title="Tips" color="info" %}}
-升级 FVTT 或者修改启动配置，请参见[脚本仓库](https://github.com/fvtt-cn/FoundryDeploy)中的文档
+自动部署脚本其他使用方法和详情，请参见[脚本仓库](https://github.com/fvtt-cn/FoundryDeploy)中的文档
+{{% /alert %}}
+
+### 如何使用自动部署脚本更新 Foundry VTT
+Docker 容器为了保证运行时文件尽量不受改动，避免在不同时间启动容器产生了行为上的差异，使用了 `--noUpdate` 参数启动容器内的 FVTT，关闭了 Foundry VTT 自动更新的功能，导致无法使用 FVTT 内置的检查更新来升级。
+
+为了解决这个问题，自动部署脚本包含了如何升级容器内 FVTT 版本的方法，这个方法会保证数据文件夹内的文件不受改动，可以放心升级。
+
+升级方法：
+1. 假设已经登入了 Linux 服务器，首先移除旧有容器
+    ```bash
+    sudo ./fvtt.sh remove
+    ```
+    按提示，输入 `y` 后回车确认，等待几秒后，旧版本容器即被成功删除
+
+2. 重建容器，使用新版本
+    ```bash
+    sudo ./fvtt.sh recreate
+    ```
+    进入和安装流程非常类似的重建容器流程，默认使用已存储的配置文件
+
+    版本号或者下载地址，输入你想升级/回退的版本号或者对应下载地址即可
+
+{{% alert title="提示" color="info" %}}
+为了方便升级和二次部署，脚本运行后默认会存储输入的参数信息。如果不需要存储配置，避免服务器被黑之后信息泄露，请在脚本运行完毕后删除 `fvtt-config` 文件
 {{% /alert %}}
