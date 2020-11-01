@@ -31,7 +31,7 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
 1. 首先，假设已经登入了 Linux 服务器，并且能够获得 root 权限
 2. 下载脚本
     ```bash
-    wget https://gitee.com/mitchx7/FoundryDeploy/raw/master/fvtt.sh && sudo chmod +x fvtt.sh
+    wget -O fvtt.sh https://gitee.com/mitchx7/FoundryDeploy/raw/master/fvtt.sh && sudo chmod +x fvtt.sh
     ```
 3. 运行脚本，进行安装
     ```bash
@@ -48,6 +48,7 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
     - ⭕ 版本号/下载地址
         - 直接回车跳过输入版本号，使用最新稳定版即可；注意：如果使用境内服务器，从 FVTT 官方下载安装包会比较慢，可以考虑粘贴[星界投影](../../../modules/#如何使用国内镜像解决系统和-mod-难以安装的问题)的镜像下载源的 Linux 版本下载链接
         - Linux 版 FVTT 的星界投影的镜像下载地址为：`https://cdn.sbea.in/foundry/linux/foundryvtt-0.7.5.zip`。如果需要使用其他版本，替换链接中的 `0.7.5` 即可
+        - ✅ 如果跳过了 FVTT 账号/密码的输入，则必须输入直链下载地址而非版本号来安装
     - ⭕ 自定义管理密码
         - 安装完成后，如果设置了这个密码，需要使用密码才能管理 FVTT，强烈推荐进行设置；回车跳过就不设置密码
     - ⭕ FVTT 绑定域名
