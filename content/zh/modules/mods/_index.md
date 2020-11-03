@@ -262,18 +262,18 @@ type: docs
 
 ---
 
-### Music Assist
-- 作者：temportalflux#3142（Discord 社区服）
+### Bellows
+- 作者：casualchameleon#6618 & temportalflux#3142（Discord 社区服）
 - 系统兼容性：通用
 - MOD 兼容性：无已知冲突
 #### 链接
-- [项目地址](https://github.com/temportalflux/MusicAssist)
-- [清单文件地址](https://raw.githubusercontent.com/temportalflux/MusicAssist/master/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/temportalflux/MusicAssist/master/module.json)
+- [项目地址](https://github.com/casualchameleon/Bellows)
+- [清单文件地址](https://raw.githubusercontent.com/casualchameleon/Bellows/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/casualchameleon/Bellows/master/module.json)
 #### 详情
-支持输入 Youtube 网址或音乐文件直链作为音乐播放源，无需下载音频到服务器，节约管理音乐文件的时间、存储空间以及服务器带宽。
+支持输入 YouTube 地址和 YouTube 播放列表作为音乐播放源，无需下载音频到服务器，节约管理音乐文件的时间、存储空间以及服务器带宽。
 
-每位玩家需要网络能够连接到 Youtube 或者音乐文件的直链才能听到串流的音乐。
+*每位玩家需要网络能够连接到 YouTube 才能听到该 MOD 从 YouTube 串流的音乐*。
 
 ---
 
