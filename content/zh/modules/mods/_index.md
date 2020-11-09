@@ -47,9 +47,9 @@ type: docs
 - 系统兼容性：通用
 - MOD 兼容性：无已知冲突
 #### 链接
-- [项目地址](https://gitlab.com/tposney/about-time)
-- [清单文件地址](https://gitlab.com/tposney/about-time/raw/master/package/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/tposney/about-time/raw/master/package/module.json)
+- [项目地址](https://github.com/ultrakorne/better-rolltables)
+- [清单文件地址](https://raw.githubusercontent.com/ultrakorne/better-rolltables/master/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/ultrakorne/better-rolltables/master/module.json)
 #### 详情
 为 FVTT 增强掷骰表等功能，让 DM 的操作更加简单。
 - 同一个公式在多个掷骰表上掷骰
