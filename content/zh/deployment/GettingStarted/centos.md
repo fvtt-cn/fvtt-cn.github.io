@@ -10,7 +10,7 @@ type: docs
 ---
 
 ## 脚本部署
-命令如下：
+    你需要一个CentOS7.x版本的 linux虚拟机，然后执行如下命令：
 ```bash
 sudo su root
 cd
