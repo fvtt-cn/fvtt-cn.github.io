@@ -290,6 +290,19 @@ type: docs
 
 ---
 
+### Perfect Vision
+- 作者：dev7355608
+- 系统兼容性：通用
+- MOD 兼容性：无已知冲突
+#### 链接
+- [项目地址](https://github.com/dev7355608/perfect-vision)
+- [清单文件地址](https://raw.githubusercontent.com/dev7355608/perfect-vision/main/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/dev7355608/perfect-vision/main/module.json)
+#### 详情
+Perfect Vision 用于自定义关于视觉的规则，支持 D&D5e, PF2e 和其他系统的黑暗视觉规则。除此之外，Perfect Vision 还包含其他关于光照的优化。比如昏暗、黑暗视觉不会再调整动画光源的亮度以致动画效果变难看，还有全局光照的改动、GM 视觉的调整。
+
+---
+
 ### Pings
 - 作者：Azzurite
 - 系统兼容性：通用
