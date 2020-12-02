@@ -36,8 +36,8 @@ type: docs
 - [清单文件地址](https://gitlab.com/tposney/about-time/raw/master/package/module.json)
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/tposney/about-time/raw/master/package/module.json)
 #### 详情
-与现实世界同步或按比例缩放计时的游戏内时钟。与 [Dynamic Effects(dnd5e)](#dynamic-effects) 等配合使用，可达成 buff、光环的计时效果。
-
+与现实世界同步或按比例缩放计时的游戏内时钟。与其他实现主动效果的系统和 MOD 配合使用，可达成控制 Buff、光环的计时效果。
+比如在 dnd5e 系统中，可以配合 [Dynamic Active Effects](5e/#dynamic-active-effects) 来调整动态主动效果的持续时间。
 配合 [Calendar/Weather](#calendarweather)，可以自动同步调整游戏内日历的进程。
 
 ---
@@ -136,22 +136,6 @@ type: docs
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/earlSt1/vtt-compendium-folders/master/module.json)
 #### 详情
 支持合集文件夹，方便管理合集。支持文件夹嵌套，文件夹拖拽以及导入/导出合集文件夹配置。
-
----
-
-### Crash's 5e Downtime Tracking
-- 作者：crash1115
-- 系统兼容性：通用
-- MOD 兼容性：无已知冲突
-#### 链接
-- [项目地址](https://github.com/crash1115/5e-training)
-- [清单文件地址](https://raw.githubusercontent.com/crash1115/5e-training/master/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/crash1115/5e-training/master/module.json)
-#### 详情
-跟踪玩家的活动，支持不同检定，方便 DM 进行记录和整理。
-- 支持简单进度（按时间推进）、基于检定进度（每次检定推进检定结果）、和基于DC进度（检定成功进度+1）
-- 丰富的自定义，如角色卡上开关休整活动的栏目、栏目名称，默认的休整活动进度类型等
-- 活动完成时可以给玩家发送消息，比如跟踪的任务进度完成了、休整活动完成等等
 
 ---
 
