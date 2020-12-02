@@ -368,6 +368,21 @@ Perfect Vision 用于自定义关于视觉的规则，支持 D&D5e, PF2e 和其�
 
 ---
 
+### Tabbed Chatlog [FVTT-CN 版本]
+- 作者：cswendrowski & hmqgg
+- 系统兼容性：通用
+- MOD 兼容性：与原版 [Tabbed Chatlog](#tabbed-chatlog) 冲突
+#### 链接
+- [项目地址](https://github.com/fvtt-cn/FoundryVTT-tabbed-chatlog)
+- [清单文件地址](https://github.com/fvtt-cn/FoundryVTT-tabbed-chatlog/releases/download/latest/module.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/github.com/fvtt-cn/FoundryVTT-tabbed-chatlog/releases/download/latest/module.json)
+#### 详情
+FVTT-CN 在 [Tabbed Chatlog](#tabbed-chatlog) 的基础上做了一定程度的修改，额外处理了先攻版块。
+
+分割聊天面板为四块：角色、掷骰、超游、先攻，避免刷屏影响聊天信息阅读。支持在不同情况下自动切换到对应的面板，使用后令 FVTT 聊天面板简洁很多。
+
+---
+
 ### Token Action HUD
 - 作者：^ and stick#0520（Discord 社区服）
 - 系统兼容性：通用
