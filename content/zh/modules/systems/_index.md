@@ -26,12 +26,15 @@ type: docs
 #### 详情
 使用 SRD 实现的 5e 基础规则，符合威世智的版权授权。可以在 MOD 章节中找到[中文翻译 MOD](../mods/#5e-中文化)。
 
+---
+
 ### D&D3r 3.5 版
 - 作者：Rughalt
 - 版权：基于 OGL v1.0a 授权，内容使用 3.5 SRD
 #### 链接
 - [项目地址](https://github.com/Rughalt/D35E)
-- [清单文件地址](https://raw.githubusercontent.com/Rughalt/D35E/0.82/system.json)
+- [清单文件地址](http://dragonshorn.info/dnd35e/system.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/dragonshorn.info/dnd35e/system.json)
 #### 详情
 基于 Furyspark 开发的 PF1 和 LoopeeDK 所做的移植工作的 3r 非官方版本，还在活跃开发中。具体开发进度和 3r 功能实现完善度参见 [GitHub Projects](https://github.com/Rughalt/D35E/projects/1)。
 
@@ -59,8 +62,8 @@ PF1 的系统，使用文档可以参见文档地址。
 - 版权：基于 OGL v1.0a 授权
 #### 链接
 - [项目地址](https://gitlab.com/hooking/foundry-vtt---pathfinder-2e)
-- [清单文件地址](https://gitlab.com/hooking/foundry-vtt---pathfinder-2e/raw/master/system.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/hooking/foundry-vtt---pathfinder-2e/raw/master/system.json)
+- [清单文件地址](https://gitlab.com/hooking/foundry-vtt---pathfinder-2e/-/jobs/artifacts/release/raw/system.json?job=build)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/hooking/foundry-vtt---pathfinder-2e/-/jobs/artifacts/release/raw/system.json)
 #### 详情
 PF2 的系统，目前还在逐步完善之中。
 
