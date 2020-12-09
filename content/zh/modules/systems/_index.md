@@ -16,7 +16,7 @@ type: docs
 
 ---
 
-### D&D5e 第五版
+### D&D5e 「龙与地下城·第五版」
 - 作者：Atropos（FVTT 核心开发者）
 - 版权：基于 OGL v1.0a 授权，内容使用 SRD 5.1
 #### 链接
@@ -28,7 +28,7 @@ type: docs
 
 ---
 
-### D&D3r 3.5 版
+### D&D3r 「龙与地下城·3.5版」
 - 作者：Rughalt
 - 版权：基于 OGL v1.0a 授权，内容使用 3.5 SRD
 #### 链接
@@ -44,7 +44,7 @@ type: docs
 
 ---
 
-### PF1e 第一版
+### PF1e 「开拓者·第一版」
 - 作者：Furyspark#7513（Discord 社区服）
 - 版权：基于 OGL v1.0a 授权
 #### 链接
@@ -57,7 +57,7 @@ PF1 的系统，使用文档可以参见文档地址。
 
 ---
 
-### PF2e 第二版
+### PF2e 「开拓者·第二版」
 - 作者：hooking#0492（Discord 社区服）
 - 版权：基于 OGL v1.0a 授权
 #### 链接
@@ -73,7 +73,7 @@ PF2 的系统，目前还在逐步完善之中。
 
 ---
 
-### CoC7th 第七版
+### CoC7th 「克苏鲁的呼唤·第七版」
 - 作者：HavlockV
 - 版权：基于 BRP OGL 授权，内容使用 BRP SRD
 #### 链接
@@ -88,7 +88,7 @@ PF2 的系统，目前还在逐步完善之中。
 
 ---
 
-### WFRP4E 中古战锤第四版
+### WFRP4E 「中古战锤·第四版」
 - 作者：Moo Man#7518/CatoThe1stElder#9725（Discord 社区服）
 - 版权：无
 #### 链接
@@ -100,7 +100,7 @@ PF2 的系统，目前还在逐步完善之中。
 
 ---
 
-### FATE/FAE 命运核心/命运加速版
+### FATE/FAE 「命运·核心/命运·加速版」
 - 作者：Nick van Oosten [NickEast#1131]（Discord 社区服）
 - 版权：基于 CC BY 3.0 授权
 #### 链接
@@ -112,7 +112,31 @@ PF2 的系统，目前还在逐步完善之中。
 
 ---
 
-### Starfinder 寻星者
+### Savage Worlds 「狂野世界」
+- 作者：FloRad / Pinnacle Entertainment Group, Inc.（官方）
+- 版权：官方授权
+#### 链接
+- [项目地址](https://gitlab.com/peginc/savage-worlds-adventure-edition)
+- [清单文件地址](https://gitlab.com/peginc/savage-worlds-adventure-edition/-/raw/master/system.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/peginc/savage-worlds-adventure-edition/-/raw/master/system.json)
+#### 详情
+官方授权的狂野世界的核心规则实现，与部分 MOD 也有整合，角色卡、UI 等都有自己的设计。
+
+---
+
+### Shadownrun 5th 「暗影狂奔·第五版」
+- 作者：Shawn Milligan [n3rf_herder#9026]（Discord 社区服）
+- 版权：无
+#### 链接
+- [项目地址](https://github.com/smilligan93/SR5-FoundryVTT)
+- [清单文件地址](https://raw.githubusercontent.com/smilligan93/SR5-FoundryVTT/master/system.json)
+- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/smilligan93/SR5-FoundryVTT/master/system.json)
+#### 详情
+暗影狂奔第五版规则的实现，添加角色卡和其他一系列游戏元素，支持装备物品自动计算，目前不含合集内容。
+
+---
+
+### Starfinder 「寻星者」
 - 作者：James Allred [wildj79#0980]（Discord 社区服）
 - 版权：基于 OGL v1.0a 授权
 #### 链接
@@ -122,14 +146,3 @@ PF2 的系统，目前还在逐步完善之中。
 #### 详情
 支持寻星者规则，借用了 dnd5e 系统的大量功能实现方法，目前不含合集内容。
 
----
-
-### Shadownrun 5th 暗影狂奔第五版
-- 作者：Shawn Milligan [n3rf_herder#9026]（Discord 社区服）
-- 版权：无
-#### 链接
-- [项目地址](https://github.com/smilligan93/SR5-FoundryVTT)
-- [清单文件地址](https://raw.githubusercontent.com/smilligan93/SR5-FoundryVTT/master/system.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/smilligan93/SR5-FoundryVTT/master/system.json)
-#### 详情
-暗影狂奔第五版规则的实现，添加角色卡和其他一系列游戏元素，支持装备物品自动计算，目前不含合集内容。
