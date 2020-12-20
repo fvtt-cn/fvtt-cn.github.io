@@ -77,6 +77,10 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
 自动部署脚本其他使用方法和详情，请参见[脚本仓库](https://github.com/fvtt-cn/FoundryDeploy)中的文档
 {{% /alert %}}
 
+{{% alert title="注意" color="warning" %}}
+如果多次提示部署失败，可以使用 `sudo ./fvtt.sh clear` 接着输入两次 `y` 和回车以确认，清空已经完成的所有配置，然后重新尝试安装
+{{% /alert %}}
+
 ### 如何使用自动部署脚本更新 Foundry VTT
 Docker 容器为了保证运行时文件尽量不受改动，避免在不同时间启动容器产生了行为上的差异，使用了 `--noUpdate` 参数启动容器内的 FVTT，关闭了 Foundry VTT 自动更新的功能，导致无法使用 FVTT 内置的检查更新来升级。
 
