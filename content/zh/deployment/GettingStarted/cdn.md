@@ -6,7 +6,7 @@ type: docs
 ---
 
 {{% pageinfo %}}
-CDN 使用指南，基于 [Docker 部署教程](../docker/#自动部署脚本中文社区-使用教程)部署后进行，与各云服务提供商*利益无关*
+CDN 使用指南，基于 [Docker 部署教程](../docker/#自动部署脚本安装流程)部署后进行，与各云服务提供商*利益无关*
 {{% /pageinfo %}}
 
 ## FAQ
@@ -62,7 +62,7 @@ CDN 主要解决 FVTT 服务器可能会遇到的带宽不足、延迟高等网�
 
 那么 `FoundryVTT 已绑定该服务器的域名`就填写 `my.fvtt.com` 后回车，`FoundryVTT 使用 CDN 时的加速域名`就填写 `cdn.fvtt.com` 后回车。
 
-部署相关的其他信息参见 [Docker 部署教程](../docker/#自动部署脚本中文社区-使用教程)。
+部署相关的其他信息参见 [Docker 部署教程](../docker/#自动部署脚本安装流程)。
 
 {{% alert title="Tips" color="info" %}}
 如果使用 CDN 加速域名，可以考虑不使用 FVTT 绑定域名，在输入参数时回车跳过 `FoundryVTT 使用 CDN 时的加速域名`即可
@@ -182,5 +182,5 @@ CDN 主要解决 FVTT 服务器可能会遇到的带宽不足、延迟高等网�
 这样的话，即使工厂更新批次了，你也可以喝到京东送来的新批次，而不是过期的。
 
 {{% alert title="Tips" color="info" %}}
-使用 [Docker 脚本](../docker/#自动部署脚本中文社区-使用教程)（脚本版本 v1.3+）部署并按[上文](#以阿里云为例配置全站加速)的方法配置（没有设置缓存过期时间），CDN 的策略会是[使用 CDN 并且协商](#使用-cdn并且协商)。*需要 CDN 支持 `proxy-revalidate`*
+使用 [Docker 脚本](../docker/#自动部署脚本安装流程)（脚本版本 v1.3+）部署并按[上文](#以阿里云为例配置全站加速)的方法配置（没有设置缓存过期时间），CDN 的策略会是[使用 CDN 并且协商](#使用-cdn并且协商)。*需要 CDN 支持 `proxy-revalidate`*
 {{% /alert %}}
