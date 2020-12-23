@@ -181,6 +181,8 @@ CDN 主要解决 FVTT 服务器可能会遇到的带宽不足、延迟高等网�
 
 这样的话，即使工厂更新批次了，你也可以喝到京东送来的新批次，而不是过期的。
 
+> 进阶阅读：[Cloudflare 源站缓存控制介绍](https://support.cloudflare.com/hc/zh-cn/articles/115003206852)
+
 {{% alert title="Tips" color="info" %}}
-使用 [Docker 脚本](../docker/#自动部署脚本安装流程)（脚本版本 v1.3+）部署并按[上文](#以阿里云为例配置全站加速)的方法配置（没有设置缓存过期时间），CDN 的策略会是[使用 CDN 并且协商](#使用-cdn并且协商)。*需要 CDN 支持 `proxy-revalidate`*
+使用 [Docker 脚本](../docker/#自动部署脚本安装流程)（脚本版本 v1.3+）部署并按[上文](#以阿里云为例配置全站加速)的方法配置（没有设置缓存过期时间），CDN 的策略会是[使用 CDN 并且协商](#使用-cdn并且协商)，*需要 CDN 支持 `proxy-revalidate`*
 {{% /alert %}}

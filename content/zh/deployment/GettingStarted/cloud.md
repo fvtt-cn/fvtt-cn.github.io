@@ -72,6 +72,21 @@ CPU 核心数尽管对运行效率有直接影响，但单核心也足以满足�
 
 如果认证无法通过，那境内最好的选择可能就是阿里云轻量应用服务器，简单直接没有别的套路，5Mbps 还算能用，每个月 1TB 的流量跑 FVTT 管够。
 
+## 登入 Linux 云服务器
+相较于 Windows 服务器通过远程桌面的连接方式，Linux 服务器通过 SSH（并不需要知道这是什么）进行连接对新接触的用户来说，稍微显得不友好了一些，但好在常见的云服务商都提供了文档，可以较为方便地连接。
+
+以下介绍常见云服务提供商的 Linux 服务器连接方式：
+
+- **阿里云**：
+    - 云服务器 ECS：按照 [ECS Workbench 文档](https://help.aliyun.com/document_detail/147650.html#title-rxh-1ss-110)，使用终端连接
+    - 轻量应用服务器 SWAS：在服务器`概览`页面，点击右上角的`远程连接`
+- **腾讯云**：
+    - 云服务器：按照[标准登录方式](https://cloud.tencent.com/document/product/213/5436)连接
+    - 轻量应用服务器：按照 [WebShell 方式](https://cloud.tencent.com/document/product/1207/44642)登录
+- **Microsoft Azure**：参见 [Azure SSH 文档](https://docs.microsoft.com/zh-cn/azure/virtual-machines/linux/ssh-from-windows)
+- **Amazon Web Services (AWS)**：参见 [AWS SSH 文档](https://docs.aws.amazon.com/zh_cn/AWSEC2/latest/UserGuide/AccessingInstancesLinux.html)
+- **Google Cloud Platform (GCP)**：参见 [GCP SSH 文档](https://cloud.google.com/compute/docs/ssh-in-browser)
+
 ## 其他问题
 除了选购以外，使用云服务器过程中也可能遇到其他问题。
 

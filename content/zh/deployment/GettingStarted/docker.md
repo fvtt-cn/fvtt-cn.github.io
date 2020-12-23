@@ -28,6 +28,8 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
 
 ### 自动部署脚本安装流程
 1. 首先，假设已经登入了 Linux 服务器，并且能够获得 root 权限
+    - 如果还没有 Linux 服务器，可以参见[云服务器指南](../cloud/#登入-linux-云服务器)，了解如何购买/基本操作
+    - 你无需了解什么是 root 权限，云服务通常会提供；如果确认无法获取，可咨询客服
 2. 下载脚本
     ```bash
     wget -O fvtt.sh https://gitee.com/mitchx7/FoundryDeploy/raw/master/fvtt.sh && sudo chmod +x fvtt.sh
