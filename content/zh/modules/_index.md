@@ -32,7 +32,20 @@ menu:
 
 上述例子中，用此法修改，链接就会变为：`https://cdn.sbea.in/https://gitlab.com/foundrynet/dnd5e/raw/master/system.json`。
 
-然后在 FVTT 中填写清单文件地址处，粘贴这个链接即可使用快速的国内镜像进行安装~
+然后在 FVTT 中填写清单文件地址处，粘贴这个链接即可使用快速的国内镜像进行安装。
+
+### FVTT 软件镜像
+为了提升境内服务器部署 FVTT 速度，星界投影镜像同时维护了 Linux 版本的 Foundry VTT 软件镜像。尤其是在境内使用脚本部署时，推荐使用。
+
+**使用方法是在需要填写 FVTT 的下载地址时，填写为 `https://cdn.sbea.in/foundry/linux/foundryvtt-0.7.9.zip`**
+
+以上链接中的 `0.7.9` 替换为你想要下载的版本号。注意，星界投影镜像源是主动获取 FVTT 官方软件包，有一定周期，建议在每一次最新版本发布的第二天以后再使用最新版本号进行部署。
+
+### 镜像源在线状态
+
+**星界投影**镜像有时会因为下线维护、或者使用量超过了为了节省成本设置的限额，导致服务器离线，无法使用。
+
+判断星界投影源能否正常使用可以参见以下地址，如果显示`在线`则可以使用：<a href="https://cdn.sbea.in/status.html" target="_blank">星界投影在线状态</a>。
 
 ### 请求同步新的 系统/MOD
 在 [GitHub 项目](https://github.com/fvtt-cn/AstralProjection/issues/new/choose)上提出新 issue，填写好 MOD 名称、项目地址、清单文件地址，即提出同步请求。
