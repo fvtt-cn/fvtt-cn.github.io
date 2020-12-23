@@ -135,6 +135,8 @@ sudo rm fvtt-config
 ### 无法完成部署
 部署过程中，由于指令输入错误、网络波动之类的原因，可能会出现下载错误，弹出 `错误：...` 一类消息并中断部署过程。根据弹出的错误提示，可以进行以下排错。
 
+---
+
 > 错误：安装 Docker 失败，请查看使用教程 FAQ 或联系脚本作者
 <br/>
 > 错误：Docker 无法启动容器，请查看使用教程 FAQ 或联系脚本作者
@@ -145,6 +147,8 @@ sudo rm fvtt-config
 
 解决方法是使用 Linux 主流发行版操作系统，如： `Ubuntu 16.04+`, `CentOS 6+`, `Debian Stretch+`, `RHEL 7+`, `Fedora 32+` 等等。如果采用云服务器进行部署，通常在购买时以及购买后都可以任意选择需要安装的 Linux 发行版，尽量选择主流版本比如 `Ubuntu 20.04`。
 
+---
+
 > 错误：... 端口被占用，无法 ... 部署
 <br/>
 > 错误：... 已经启动过，请升级而非安装
@@ -152,6 +156,8 @@ sudo rm fvtt-config
 > 错误：... 容器启动失败
 
 出现这种情况的通常原因是已经部署过 FVTT 并且没有按照升级流程的步骤，首先移除旧有容器，需要先执行：`sudo ./fvtt.sh remove` 以移除，具体步骤可以参见上文[升级流程](#升级流程)。
+
+---
 
 > 错误：拉取 ... 失败
 
@@ -169,6 +175,7 @@ sudo docker pull ...
 | Caddy | docker.mirrors.ustc.edu.cn/library/caddy | library/caddy |
 | FileBrowser | docker.mirrors.ustc.edu.cn/filebrowser/filebrowser:alpine | filebrowser/filebrowser:alpine |
 | Portainer | docker.mirrors.ustc.edu.cn/portainer/portainer-ce | portainer/portainer-ce |
+| ImageOptim | docker.mirrors.ustc.edu.cn/hmqgg/image_optim | hmqgg/image_optim |
 
 拉取成功后，再执行脚本部署命令。
 
@@ -177,6 +184,8 @@ sudo docker pull ...
 sudo FORCE_GLO=true ./fvtt.sh
 ```
 *更新时同理，在后面添加* `recreate` 变为 `sudo FORCE_GLO=true ./fvtt.sh recreate`。
+
+---
 
 {{% alert title="注意" color="primary" %}}
 如果多次提示部署失败，可以使用 `sudo ./fvtt.sh clear` 接着输入两次 `y` 和回车以确认，清空已经完成的所有配置和存储，然后重新尝试全新安装
@@ -197,9 +206,13 @@ sudo ./fvtt.sh check
 
 该诊断可以多次运行；根据以上输出的结果，可以进行以下判断：
 
+---
+
 > 以上状态均正常，但是浏览器无法打开 FVTT，*以及无法打开 Web 文件管理器和 Docker 仪表盘（如果选择启用）*
 
 检查服务器防火墙设置，具体可以参见云服务器指南中的[部署完毕后无法访问](../cloud/#部署完毕后无法访问)。
+
+---
 
 > **FoundryVTT 容器状态**显示 `running`，**登录状态**显示 `登录成功`，但是**下载状态**等待许久而始终显示 `未完成`
 
@@ -212,6 +225,8 @@ sudo ./fvtt.sh check
 
 *境内服务器如果不使用星界投影源（比如星界投影镜像下线时），尽量考虑在白天进行下载，网络连接状况会好一些*。
 
+---
+
 > **FoundryVTT 容器状态**显示 `running`，但是**登录状态**显示 `登录失败`，且**下载状态**始终显示 `未完成`
 
 这种情况代表输入参数时，填写了 FoundryVTT 的用户名和密码，但是用户名/密码错误，导致无法成功登录。
@@ -222,6 +237,8 @@ sudo ./fvtt.sh check
 
 *如果暂时无法提供正确的 FVTT 用户名/密码，可以在输入用户名和密码时，都回车跳过。但这种情况下，必须要使用星界投影镜像或者其他镜像填写**版本号或下载地址**，否则无法成功下载 FVTT 文件*。
 
+---
+
 > **FoundryVTT 容器状态**显示 `exited`，**可访问性**显示 `unhealthy`，**FoundryVTT 文件状态**却显示 `可以运行`
 
 FVTT 容器意外退出且没有重启，可以重启所有容器，执行：
@@ -231,8 +248,33 @@ sudo ./fvtt.sh restart
 
 重启后等待几十秒，如果仍然无法访问可以考虑按照[升级流程](#fvtt-升级更新流程)重新部署。
 
+---
+
 {{% alert title="注意" color="warning" %}}
 如果多次提示部署失败或者出现部署后诊断一切正常但仍无法打开，可以使用 `sudo ./fvtt.sh clear` 接着输入两次 `y` 和回车以确认，清空已经完成的所有配置，然后重新尝试安装
 
 但需要注意，如果之前已经通过此法部署并使用过 FVTT，拥有世界、合集、模组等游戏文件，清空会**一并删除所有数据**！在如此做之前，请确定你知道你在做什么
 {{% /alert %}}
+
+---
+
+## 脚本额外功能
+
+### 图片自动压缩/优化
+> 需要脚本版本 `v1.5.0+`
+
+自动部署脚本中包含自动监控并优化 FVTT 数据目录下图片 `(jpg|png|gif|svg)` 的容器：当有图片加入 `/data` 数据目录下，如果已经部署了优化容器，将会操作图片并进行*有损压缩*，在尽量少损失图片质量的情况下，减小图片的文件体积。
+
+FVTT 安装 MOD 和系统时，会清空文件夹并重新填充内容，故而本容器配置时会跳过 `modules`/`systems` 文件夹下的所有图片。
+
+#### 启动图片优化容器
+```bash
+sudo ./fvtt.sh do_optim
+```
+
+#### 移除图片优化容器
+```bash
+sudo ./fvtt.sh undo_optim
+```
+
+*移除 FVTT 或清空也会移除图片优化容器*。
