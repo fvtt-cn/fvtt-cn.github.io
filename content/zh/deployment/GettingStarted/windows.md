@@ -13,9 +13,11 @@ type: docs
 
 服务器有数种系统，例如 Windows、Linux、MacOS、Ubuntu 等。本教程以 Windows 系统为例。
 
-那么我们假设你已经购买了服务器，并且安装好了 Windows Server 系统，连接上了**远程桌面**，接下来就进行部署：
+那么假设你已经购买了服务器，并且安装好了 Windows Server 系统，连接上了**远程桌面**，接下来就进行部署：
 
 ## 基础配置
+
+### 手动部署过程
 1. 下载并安装 Node.js，在 [Node.js 官网安装页面](https://nodejs.org/zh-cn/download/)上，点击 Windows 安装包下载
 2. 将 Node.js 安装包通过 *远程桌面* 复制到服务器上，然后在服务器上点击安装包文件，一路确认，安装 Node.js
 3. 从 [Foundry VTT 官网](https://foundryvtt.com/)上下载最新包，使用 Node.js 部署，所以选择第四项
@@ -35,6 +37,7 @@ FoundryVTT | 2020-08-15 14:50:37 | [info] Running on Node.js - Version 14.8.0
 ```
 
 在自己电脑的浏览器上输入 `http://[服务器IP]:30000` 即可访问 FVTT，然后就可以把远程桌面关闭了。
+> 服务器 IP 一般是云服务器控制台网页上的公网 IP
 
 ### 在腾讯云 Windows Server 服务器上部署的教程视频
 

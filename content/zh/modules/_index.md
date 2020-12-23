@@ -14,7 +14,7 @@ menu:
 
 基于 FVTT 足够开放的 API、宏，使用 JavaScript，社区已经构建出了不少耳熟能详的游戏系统，作为 FVTT 上进行游戏的基石；也制作出了一个又一个解决跑团痛点，或者奇思妙想的 MOD。
 
-> 注意， FVTT 本身并不含核心的游戏规则，你需要安装游戏系统来为你的世界设定一个基础游戏规则，比如 `dnd5e`。
+> 注意， FVTT 本身并不含核心的游戏规则，你需要安装游戏系统来为你的世界设定一个基础游戏规则，比如 `dnd5e`
 
 [游戏系统/MOD 官方合集（内容可能来自第三方）](https://foundryvtt.com/packages/)
 
@@ -26,11 +26,11 @@ menu:
 
 **使用方法是在安装前，替换清单文件（Manifest URL）的链接：**
 
-比如当你需要安装 `dnd5e` 游戏系统时，从官网或中文社区 MOD 介绍中复制到的，它的清单文件地址是：`https://gitlab.com/foundrynet/dnd5e/raw/master/system.json`
+比如当你需要安装 `dnd5e` 游戏系统时，从官网或中文社区 MOD 介绍中复制到的，它的清单文件地址是：`https://gitlab.com/foundrynet/dnd5e/raw/master/system.json`。
 
-**在这个地址的前面，加上一段 `https://cdn.sbea.in/`，即替换为国内镜像地址。**
+**在这个地址的前面，加上一段 `https://cdn.sbea.in/`，即替换为国内镜像地址**。
 
-上述例子中，用此法修改，链接就会变为：`https://cdn.sbea.in/https://gitlab.com/foundrynet/dnd5e/raw/master/system.json`
+上述例子中，用此法修改，链接就会变为：`https://cdn.sbea.in/https://gitlab.com/foundrynet/dnd5e/raw/master/system.json`。
 
 然后在 FVTT 中填写清单文件地址处，粘贴这个链接即可使用快速的国内镜像进行安装~
 

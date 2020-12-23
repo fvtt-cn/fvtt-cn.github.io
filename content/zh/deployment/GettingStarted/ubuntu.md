@@ -5,7 +5,7 @@ weight: 11
 type: docs
 ---
 
-> 本篇教程参考 FVTT 英文社群网站 [Ubuntu VM 部署教程](https://foundry-vtt-community.github.io/wiki/Ubuntu-VM/)。
+> 本篇教程参考 FVTT 英文社群网站 [Ubuntu VM 部署教程](https://foundry-vtt-community.github.io/wiki/Ubuntu-VM/)
 
 ---
 
@@ -67,7 +67,7 @@ pwd
 ```bash
 wget "https://foundryvtt.s3-us-west-2.amazonaws.com/releases/[Key]/FoundryVirtualTabletop-linux-x64.zip"
 ```
-**后面的这段链接替换为从官网处复制到的链接**
+**后面的这段链接替换为从官网处复制到的链接**。
 
 下载完毕后，解压 FVTT（如果文件名不一致，更换为下载保存的 FVTT 压缩包文件名）：
 ```bash
@@ -75,7 +75,7 @@ unzip FoundryVirtualTabletop-linux-x64.zip
 rm FoundryVirtualTabletop-linux-x64.zip
 ```
 
-然后测试确认 FVTT 是否能够正常运行：`node $HOME/foundry/resources/app/main.js --port=62621 --dataPath=/tmp/foundrydata`
+然后测试确认 FVTT 是否能够正常运行：`node $HOME/foundry/resources/app/main.js --port=62621 --dataPath=/tmp/foundrydata`：
 ```bash
 FoundryVTT | 2020-07-06 07:48:44 | [info] Foundry Virtual Tabletop - Version 0.6.5
 FoundryVTT | 2020-07-06 07:48:44 | [info] Running on Node.js - Version 12.18.2
@@ -110,7 +110,7 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 ```
 它生成了一个命令，即`sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u [XXX] --hp /home/[XXX]`这一部分，其中 `[XXX]` 会被自动替换为当前登录使用的用户。复制输出的这段命令（而非从网页上复制）并且执行：
 
-> 如果使用 root 执行 `pm2 startup` 命令，则会直接配置为系统服务，不需要复制粘贴命令执行。
+> 如果使用 root 执行 `pm2 startup` 命令，则会直接配置为系统服务，不需要复制粘贴命令执行
 
 ```bash
 [PM2] [v] Command successfully executed.
@@ -125,7 +125,7 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 pm2 start $HOME/foundry/resources/app/main.js --name foundry -- --port=8080 --dataPath=$HOME/foundrydata
 ```
 
-> 端口号`8080`可以调整，但是后续的端口号都需要对应修改。
+> 端口号`8080`可以调整，但是后续的端口号都需要对应修改
 
 运行完毕后，使用 `pm2 list` 来查看 pm2 正在管理的进程实例：
 ```bash
