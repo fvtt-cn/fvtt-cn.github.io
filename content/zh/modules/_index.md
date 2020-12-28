@@ -47,6 +47,8 @@ menu:
 
 判断星界投影源能否正常使用可以参见以下地址，如果显示`在线`则可以使用：<a href="https://cdn.sbea.in/status.html" target="_blank">星界投影在线状态</a>。
 
+除此之外，在星界投影的[列表页面](https://cdn.sbea.in/list.html)，可以通过 <kbd>Ctrl</kbd>+<kbd>F</kbd> 快速检索星界投影已经镜像的清单文件地址。
+
 ### 请求同步新的 系统/MOD
 在 [GitHub 项目](https://github.com/fvtt-cn/AstralProjection/issues/new/choose)上提出新 issue，填写好 MOD 名称、项目地址、清单文件地址，即提出同步请求。
 
