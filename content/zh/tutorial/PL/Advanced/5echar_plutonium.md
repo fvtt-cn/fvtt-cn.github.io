@@ -13,7 +13,7 @@ type: docs
 
 本教学用于 Foundry VTT 平台的 D&D5E 系统角色卡创建。
 
-作为 DM，需要安装「Plutonium」模组。这个模组是 5eTools 团队开发的，提供了 [5eTools](https://5e.tools/) 网站资源的强大便捷导入功能等。
+作为 DM，需要安装「Plutonium」模组。本模组由 5eTools 团队开发，提供了 5eTools 网站资源的便捷导入等实用功能。
 
 ### 进入 Plutonium 导入器
 
