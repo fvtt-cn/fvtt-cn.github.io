@@ -6,6 +6,9 @@
 - [GitHub Pages](https://fvtt-cn.github.io/)
 - [Gitee 国内镜像](https://fvtt-cn.gitee.io/)
 
+## 如何为本站点编写内容
+果园招募地址：http://www.goddessfantasy.net/bbs/index.php?topic=123973.0
+
 ## 如何在本地编辑并运行
 
 1. 安装 `hugo-extended`
