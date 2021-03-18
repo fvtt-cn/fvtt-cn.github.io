@@ -5,6 +5,10 @@ weight: 1
 type: docs
 ---
 
+{{% pageinfo %}}
+作者：鹰酱
+{{% /pageinfo %}}
+
 ## 前置需求
 
 本文旨在对新玩家进行简单的 D&D5e 车卡指导，教程中依赖以下 MOD：
