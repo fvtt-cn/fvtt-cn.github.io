@@ -1,6 +1,6 @@
 ---
-title: "D&D5e 战斗指南"
-linkTitle: "D&D5e 战斗"
+title: "D&D5e PL 战斗指南"
+linkTitle: "战斗指南"
 weight: 21
 type: docs
 ---
