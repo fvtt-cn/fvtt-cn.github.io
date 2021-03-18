@@ -1,6 +1,6 @@
 ---
 title: "D&D5e PL 使用 Plutonium 车卡指北"
-linkTitle: "D&D5e 车卡（5etools）"
+linkTitle: "车卡（5etools）"
 weight: 11
 type: docs
 ---

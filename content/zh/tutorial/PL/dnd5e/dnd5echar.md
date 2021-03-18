@@ -1,6 +1,6 @@
 ---
 title: "D&D5e PL 车卡指北"
-linkTitle: "D&D5e 车卡"
+linkTitle: "车卡（合集包）"
 weight: 1
 type: docs
 ---
