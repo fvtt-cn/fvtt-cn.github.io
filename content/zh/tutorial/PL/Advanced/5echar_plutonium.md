@@ -5,9 +5,11 @@ weight: 11
 type: docs
 ---
 
-## Plutonium 车卡教学
+{{% pageinfo %}}
+作者：ZzNoah
+{{% /pageinfo %}}
 
-> 作者：ZzNoah
+## Plutonium 车卡教学
 
 ### 前言
 
