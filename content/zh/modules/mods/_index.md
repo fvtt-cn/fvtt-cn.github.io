@@ -199,7 +199,7 @@ type: docs
 - 系统兼容性：通用
 - MOD 兼容性：无已知冲突
 #### 链接
-- [项目地址](https://github.com/UberV/scaleGridl)
+- [项目地址](https://github.com/UberV/scaleGrid)
 - [清单文件地址](https://raw.githubusercontent.com/UberV/scaleGrid/master/module.json)
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/raw.githubusercontent.com/UberV/scaleGrid/master/module.json)
 #### 详情
@@ -323,19 +323,6 @@ Perfect Vision 用于自定义关于视觉的规则，支持 D&D5e, PF2e 和其�
 - [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/fvtt-modules-lab/quick-insert/-/jobs/artifacts/master/raw/module.json)
 #### 详情
 按下 <kbd>Ctrl</kbd>+<kbd>Space</kbd> 唤出快速搜索栏，可以在搜索栏里搜索几乎一切当前世界里的内容，包括角色、日志、合集、场景等等，并且提供自动补全，以便快速输入和找到结果，搜索结果可以直接被拖拽使用。
-
----
-
-### Response Times
-- 作者：Tenuki
-- 系统兼容性：通用
-- MOD 兼容性：无已知冲突
-#### 链接
-- [项目地址](https://gitlab.com/tenuki.igo/foundryvtt-ping-times)
-- [清单文件地址](https://gitlab.com/tenuki.igo/foundryvtt-ping-times/-/raw/master/dist/module.json)
-- [清单文件地址（国内镜像）](https://cdn.sbea.in/gitlab.com/tenuki.igo/foundryvtt-ping-times/-/raw/master/dist/module.json)
-#### 详情
-在左下角玩家栏中显示每一个玩家的 Ping 值（响应时间），方便确认网络情况，尤其适合跨境连接的网络和 P2P 玩家使用。
 
 ---
 
