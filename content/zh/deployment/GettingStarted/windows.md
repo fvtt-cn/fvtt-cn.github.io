@@ -61,7 +61,7 @@ FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直�
 
 首先，还是`运行`→`mstsc`，点击确定打开下一级对话框。
 
-	- ![](/images/deployment/winserver/00-connect.png)
+	- ![](/images/deployment/winserver/01-mstsc.png)
 
 点击左下角的`显示选项`，在下方`连接设置`栏目中，选择`另存为..`，保存RDP到你的桌面或任意文件夹中。
 下次你想要登陆你的远程桌面时，双击打开这个RDP文件即可立即连接。
