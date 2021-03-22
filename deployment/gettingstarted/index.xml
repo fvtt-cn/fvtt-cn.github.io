@@ -710,8 +710,7 @@ allowfullscreen="true">
 &lt;/blockquote>
 &lt;hr>
 &lt;h2 id="选择你的安装方式">选择你的安装方式&lt;/h2>
-&lt;p>首先，你得租用一台云服务器。不管运营商是阿里云、腾讯云还是百度云，同系统的操作都是一样的。
-本教程使用的是腾讯云服务器。&lt;/p>
+&lt;p>首先，你得租用一台云服务器。不管运营商是阿里云、腾讯云还是百度云，同系统的操作都是一样的。本教程使用的是腾讯云服务器。&lt;/p>
 &lt;p>FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直接安装，2是使用Node.js版本进行安装。
 二者相较起来，exe版本比较接近平时的Windows使用操作，适合刚入门的初学者；Node.js版本需要一些指令操作，适合有一定基础的用户。
 在实际的测试中，二者不存在实际的性能差距，仅仅是操作和运行方式不同，所以请不要担心。&lt;/p>
@@ -762,8 +761,8 @@ allowfullscreen="true">
 - &lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/00-connect.png" alt="">
 点击左下角的&lt;code>显示选项&lt;/code>，在下方&lt;code>连接设置&lt;/code>栏目中，选择&lt;code>另存为..&lt;/code>，保存RDP到你的桌面或任意文件夹中。
 下次你想要登陆你的远程桌面时，双击打开这个RDP文件即可立即连接。&lt;/p>
-&lt;h3 id="创建守护进程">创建守护进程&lt;/h3>
-&lt;p>如果你对修改程序的需求比较多，可以创建一个守护进程，这样当你执行某些操作(比如修改端口)需要关闭服务器上的FoundryVTT端时，就不用再登录到远程桌面进行手动重启操作了。&lt;/p>
+&lt;h3 id="创建值守进程">创建值守进程&lt;/h3>
+&lt;p>如果你对修改程序的需求比较多，可以创建一个值守进程，这样当你执行某些操作(比如修改端口)需要关闭服务器上的FoundryVTT端时，就不用再登录到远程桌面进行手动重启操作了。&lt;/p>
 &lt;p>打开C盘主目录，新建一个文本文档，内容如下：&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">@echo off
 title RabbitMQ-Daemons-exe
