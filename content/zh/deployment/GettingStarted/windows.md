@@ -22,17 +22,27 @@ FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直�
 
 1. 进入你的服务器运营商网页后台，设置你的远程连接密码。
 2. 在[Foundry VTT 官网](https://foundryvtt.com/)下载FoundryVTT的.exe安装包，右键`复制`（或<kbd>Ctrl+C</kbd>）。
+
       - ![](/images/deployment/winserver/03-download.png)
+
 3. 在你的桌面上右键`开始`→`运行`（或者按`win+R`），输入`mstsc`，确定。
+
     - ![](/images/deployment/winserver/00-connect.png)
+
 4. 输入`你的服务器IP`连接。
+
     - ![](/images/deployment/winserver/01-mstsc.png)
+
 5. 输入`你的登录密码`确定，进入服务器远程桌面。
+
     - ![](/images/deployment/winserver/02-password.png)
+
 6. 打开C盘，右键粘贴（或<kbd>Ctrl+V</kbd>）你刚才复制的FoundryVTT.exe安装包，双击安装。
 7. 安装完成后，双击桌面图标运行FVTT，输入授权KEY，然后点击`agree`同意安装协议。
 8. 右键`开始`→`运行`（或者按`win+R`）,输入`firewall.cpl`，打开`Windows Defender 防火墙`，点击左方`允许应用或功能通过windows defender防火墙`。
+
     - ![](/images/deployment/winserver/firewalls2.png)
+
 在列表中找到`FoundryVTT`，勾选右边的两个选项，然后保存。
 （如果列表中没有，点击`允许其他应用`并添加FoundryVTT）
 
@@ -40,9 +50,9 @@ FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直�
 现在你可以关闭远程桌面，在你的电脑上使用浏览器访问`你的服务器IP:30000`，就能直接使用FVTT了！
 
 注意事项：
-· 即使关闭远程桌面，只要FoundryVTT程序还在运行着就可以使用。
-· 某些选项会让你重启FoundryVTT程序，若程序关闭了，此时你需要登录到远程桌面重新手动启动FoundryVTT。
-· 存储在本地的资源可直接使用<kbd>ctrl+C</kbd>，<kbd>ctrl+V</kbd>命令复制到远程桌面文件夹中。
+- 即使关闭远程桌面，只要FoundryVTT程序还在运行着就可以使用。
+- 某些选项会让你重启FoundryVTT程序，若程序关闭了，此时你需要登录到远程桌面重新手动启动FoundryVTT。
+- 存储在本地的资源可直接使用<kbd>ctrl+C</kbd>，<kbd>ctrl+V</kbd>命令复制到远程桌面文件夹中。
 
 ### 创建远程桌面登陆快捷方式
 
@@ -50,7 +60,9 @@ FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直�
 （某些服务器运营商后台就提供RDP文件下载，如果没有，你可以按照下面的方法创建一个。）
 
 首先，还是`运行`→`mstsc`，点击确定打开下一级对话框。
+
 	- ![](/images/deployment/winserver/00-connect.png)
+
 点击左下角的`显示选项`，在下方`连接设置`栏目中，选择`另存为..`，保存RDP到你的桌面或任意文件夹中。
 下次你想要登陆你的远程桌面时，双击打开这个RDP文件即可立即连接。
 
@@ -59,6 +71,7 @@ FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直�
 如果你对修改程序的需求比较多，可以创建一个值守进程，这样当你执行某些操作(比如修改端口)需要关闭服务器上的FoundryVTT端时，就不用再登录到远程桌面进行手动重启操作了。
 
 打开C盘主目录，新建一个文本文档，内容如下：
+
 ```bash
 @echo off
 title RabbitMQ-Daemons-exe
