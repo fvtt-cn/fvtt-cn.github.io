@@ -709,11 +709,85 @@ allowfullscreen="true">
 &lt;p>本篇教程参考 FVTT 英文社群网站 &lt;a href="https://foundry-vtt-community.github.io/wiki/Windows/">Windows 托管教程&lt;/a>和&lt;a href="http://www.goddessfantasy.net/bbs/index.php?topic=117014.0">猫斯基的 Windows Server 部署教程&lt;/a>。&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;p>如果你没有公网 IP，又不缺一台服务器的钱，那么你可以考虑租一台服务器并架设一个 FoundryVTT 在上面。&lt;/p>
-&lt;p>服务器有数种系统，例如 Windows、Linux、MacOS、Ubuntu 等。本教程以 Windows 系统为例。&lt;/p>
-&lt;p>那么假设你已经购买了服务器，并且安装好了 Windows Server 系统，连接上了&lt;strong>远程桌面&lt;/strong>，接下来就进行部署：&lt;/p>
-&lt;h2 id="基础配置">基础配置&lt;/h2>
-&lt;h3 id="手动部署过程">手动部署过程&lt;/h3>
+&lt;h2 id="选择你的安装方式">选择你的安装方式&lt;/h2>
+&lt;p>首先，你得租用一台云服务器。不管运营商是阿里云、腾讯云还是百度云，同系统的操作都是一样的。
+本教程使用的是腾讯云服务器。&lt;/p>
+&lt;p>FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直接安装，2是使用Node.js版本进行安装。
+二者相较起来，exe版本比较接近平时的Windows使用操作，适合刚入门的初学者；Node.js版本需要一些指令操作，适合有一定基础的用户。
+在实际的测试中，二者不存在实际的性能差距，仅仅是操作和运行方式不同，所以请不要担心。&lt;/p>
+&lt;h3 id="exe版本">exe版本&lt;/h3>
+&lt;hr>
+&lt;ol>
+&lt;li>进入你的服务器运营商网页后台，设置你的远程连接密码。&lt;/li>
+&lt;li>在&lt;a href="https://foundryvtt.com/">Foundry VTT 官网&lt;/a>下载FoundryVTT的.exe安装包，右键&lt;code>复制&lt;/code>（或&lt;kbd>Ctrl+C&lt;/kbd>）。
+&lt;ul>
+&lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/03-download.png" alt="">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>在你的桌面上右键&lt;code>开始&lt;/code>→&lt;code>运行&lt;/code>（或者按&lt;code>win+R&lt;/code>），输入&lt;code>mstsc&lt;/code>，确定。
+&lt;ul>
+&lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/00-connect.png" alt="">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>输入&lt;code>你的服务器IP&lt;/code>连接。
+&lt;ul>
+&lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/01-mstsc.png" alt="">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>输入&lt;code>你的登录密码&lt;/code>确定，进入服务器远程桌面。
+&lt;ul>
+&lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/02-password.png" alt="">&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>打开C盘，右键粘贴（或&lt;kbd>Ctrl+V&lt;/kbd>）你刚才复制的FoundryVTT.exe安装包，双击安装。&lt;/li>
+&lt;li>安装完成后，双击桌面图标运行FVTT，输入授权KEY，然后点击&lt;code>agree&lt;/code>同意安装协议。&lt;/li>
+&lt;li>右键&lt;code>开始&lt;/code>→&lt;code>运行&lt;/code>（或者按&lt;code>win+R&lt;/code>）,输入&lt;code>firewall.cpl&lt;/code>，打开&lt;code>Windows Defender 防火墙&lt;/code>，点击左方&lt;code>允许应用或功能通过windows defender防火墙&lt;/code>。
+&lt;ul>
+&lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/firewalls2.png" alt="">
+在列表中找到&lt;code>FoundryVTT&lt;/code>，勾选右边的两个选项，然后保存。
+（如果列表中没有，点击&lt;code>允许其他应用&lt;/code>并添加FoundryVTT）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>到这里，你就部署成功啦~（撒花）
+现在你可以关闭远程桌面，在你的电脑上使用浏览器访问&lt;code>你的服务器IP:30000&lt;/code>，就能直接使用FVTT了！&lt;/p>
+&lt;p>注意事项：
+· 即使关闭远程桌面，只要FoundryVTT程序还在运行着就可以使用。
+· 某些选项会让你重启FoundryVTT程序，若程序关闭了，此时你需要登录到远程桌面重新手动启动FoundryVTT。
+· 存储在本地的资源可直接使用&lt;kbd>ctrl+C&lt;/kbd>，&lt;kbd>ctrl+V&lt;/kbd>命令复制到远程桌面文件夹中。&lt;/p>
+&lt;h3 id="创建远程桌面登陆快捷方式">创建远程桌面登陆快捷方式&lt;/h3>
+&lt;p>如果你不想每次都点击&lt;code>运行&lt;/code>来连接你的远程桌面，那么可以为其创建一个快捷登陆方式（.RDP文件）。
+（某些服务器运营商后台就提供RDP文件下载，如果没有，你可以按照下面的方法创建一个。）&lt;/p>
+&lt;p>首先，还是&lt;code>运行&lt;/code>→&lt;code>mstsc&lt;/code>，点击确定打开下一级对话框。
+- &lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/00-connect.png" alt="">
+点击左下角的&lt;code>显示选项&lt;/code>，在下方&lt;code>连接设置&lt;/code>栏目中，选择&lt;code>另存为..&lt;/code>，保存RDP到你的桌面或任意文件夹中。
+下次你想要登陆你的远程桌面时，双击打开这个RDP文件即可立即连接。&lt;/p>
+&lt;h3 id="创建守护进程">创建守护进程&lt;/h3>
+&lt;p>如果你对修改程序的需求比较多，可以创建一个守护进程，这样当你执行某些操作(比如修改端口)需要关闭服务器上的FoundryVTT端时，就不用再登录到远程桌面进行手动重启操作了。&lt;/p>
+&lt;p>打开C盘主目录，新建一个文本文档，内容如下：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">@echo off
+title RabbitMQ-Daemons-exe
+rem 定义循环间隔时间和监测的服务：
+&lt;span style="color:#204a87">set&lt;/span> &lt;span style="color:#000">secs&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">10&lt;/span>
+&lt;span style="color:#204a87">set&lt;/span> &lt;span style="color:#000">exename&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;FoundryVTT.exe&amp;#34;&lt;/span>
+&lt;span style="color:#204a87">set&lt;/span> &lt;span style="color:#000">exepath&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;C:\FoundryVTT\FoundryVTT.exe&amp;#34;&lt;/span>
+&lt;span style="color:#204a87">echo&lt;/span> Daemons-exe is : %exename%
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> %exename%. &lt;span style="color:#ce5c00;font-weight:bold">==&lt;/span> . goto end
+:chkit
+&lt;span style="color:#204a87">set&lt;/span> &lt;span style="color:#000">svrst&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">0&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">for&lt;/span> /f %%i in &lt;span style="color:#ce5c00;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#39;tasklist&amp;#39;&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">)&lt;/span> &lt;span style="color:#204a87;font-weight:bold">do&lt;/span> &lt;span style="color:#204a87;font-weight:bold">if&lt;/span> /I &lt;span style="color:#4e9a06">&amp;#34;%%i&amp;#34;&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">==&lt;/span> %exename% &lt;span style="color:#204a87">set&lt;/span> &lt;span style="color:#000">svrst&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#0000cf;font-weight:bold">1&lt;/span>
+rem 如果不是管理员就无法启动
+&lt;span style="color:#204a87;font-weight:bold">if&lt;/span> %svrst% &lt;span style="color:#ce5c00;font-weight:bold">==&lt;/span> &lt;span style="color:#0000cf;font-weight:bold">0&lt;/span> start &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span> %exepath% start taskkill /f /im cmd.exe
+&lt;span style="color:#204a87">set&lt;/span> &lt;span style="color:#000">svrst&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>
+rem 下面的命令用于延时，否则可能会导致cpu单个核心满载。
+ping -n %secs% 127.0.0.1 &amp;gt; nul
+goto chkit
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>seces=10&lt;/code> 为重新检查的间隔，默认为10秒
+&lt;code>exepath=&amp;quot;&amp;quot;&lt;/code> 这里为你的FVTT程序路径&lt;/p>
+&lt;p>保存文本文档，重命名为&lt;code>autorun.bat&lt;/code>，然后运行此bat即可。
+&lt;a href="https://blog.csdn.net/qq_18671415/article/details/111640477?utm_medium=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase&amp;amp;depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase">参考文章&lt;/a>&lt;/p>
+&lt;h3 id="nodejs版本">Node.js版本&lt;/h3>
+&lt;hr>
 &lt;ol>
 &lt;li>下载并安装 Node.js，在 &lt;a href="https://nodejs.org/zh-cn/download/">Node.js 官网安装页面&lt;/a>上，点击 Windows 安装包下载&lt;/li>
 &lt;li>将 Node.js 安装包通过 &lt;em>远程桌面&lt;/em> 复制到服务器上，然后在服务器上点击安装包文件，一路确认，安装 Node.js&lt;/li>
