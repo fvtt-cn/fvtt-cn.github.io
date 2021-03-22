@@ -771,7 +771,7 @@ allowfullscreen="true">
 &lt;p>如果你不想每次都点击&lt;code>运行&lt;/code>来连接你的远程桌面，那么可以为其创建一个快捷登陆方式（.RDP文件）。
 （某些服务器运营商后台就提供RDP文件下载，如果没有，你可以按照下面的方法创建一个。）&lt;/p>
 &lt;p>首先，还是&lt;code>运行&lt;/code>→&lt;code>mstsc&lt;/code>，点击确定打开下一级对话框。&lt;/p>
-&lt;pre>&lt;code>- ![](/images/deployment/winserver/00-connect.png)
+&lt;pre>&lt;code>- ![](/images/deployment/winserver/01-mstsc.png)
 &lt;/code>&lt;/pre>
 &lt;p>点击左下角的&lt;code>显示选项&lt;/code>，在下方&lt;code>连接设置&lt;/code>栏目中，选择&lt;code>另存为..&lt;/code>，保存RDP到你的桌面或任意文件夹中。
 下次你想要登陆你的远程桌面时，双击打开这个RDP文件即可立即连接。&lt;/p>
