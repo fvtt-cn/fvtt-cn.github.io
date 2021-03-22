@@ -9,15 +9,88 @@ type: docs
 
 ---
 
-如果你没有公网 IP，又不缺一台服务器的钱，那么你可以考虑租一台服务器并架设一个 FoundryVTT 在上面。
+## 选择你的安装方式
 
-服务器有数种系统，例如 Windows、Linux、MacOS、Ubuntu 等。本教程以 Windows 系统为例。
+首先，你得租用一台云服务器。不管运营商是阿里云、腾讯云还是百度云，同系统的操作都是一样的。
+本教程使用的是腾讯云服务器。
 
-那么假设你已经购买了服务器，并且安装好了 Windows Server 系统，连接上了**远程桌面**，接下来就进行部署：
+FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直接安装，2是使用Node.js版本进行安装。
+二者相较起来，exe版本比较接近平时的Windows使用操作，适合刚入门的初学者；Node.js版本需要一些指令操作，适合有一定基础的用户。
+在实际的测试中，二者不存在实际的性能差距，仅仅是操作和运行方式不同，所以请不要担心。
 
-## 基础配置
+### exe版本
+---
 
-### 手动部署过程
+1. 进入你的服务器运营商网页后台，设置你的远程连接密码。
+2. 在[Foundry VTT 官网](https://foundryvtt.com/)下载FoundryVTT的.exe安装包，右键`复制`（或<kbd>Ctrl+C</kbd>）。
+      - ![](/images/deployment/winserver/03-download.png)
+3. 在你的桌面上右键`开始`→`运行`（或者按`win+R`），输入`mstsc`，确定。
+    - ![](/images/deployment/winserver/00-connect.png)
+4. 输入`你的服务器IP`连接。
+    - ![](/images/deployment/winserver/01-mstsc.png)
+5. 输入`你的登录密码`确定，进入服务器远程桌面。
+    - ![](/images/deployment/winserver/02-password.png)
+6. 打开C盘，右键粘贴（或<kbd>Ctrl+V</kbd>）你刚才复制的FoundryVTT.exe安装包，双击安装。
+7. 安装完成后，双击桌面图标运行FVTT，输入授权KEY，然后点击`agree`同意安装协议。
+8. 右键`开始`→`运行`（或者按`win+R`）,输入`firewall.cpl`，打开`Windows Defender 防火墙`，点击左方`允许应用或功能通过windows defender防火墙`。
+    - ![](/images/deployment/winserver/firewalls2.png)
+在列表中找到`FoundryVTT`，勾选右边的两个选项，然后保存。
+（如果列表中没有，点击`允许其他应用`并添加FoundryVTT）
+
+到这里，你就部署成功啦~（撒花）
+现在你可以关闭远程桌面，在你的电脑上使用浏览器访问`你的服务器IP:30000`，就能直接使用FVTT了！
+
+注意事项：
+· 即使关闭远程桌面，只要FoundryVTT程序还在运行着就可以使用。
+· 某些选项会让你重启FoundryVTT程序，若程序关闭了，此时你需要登录到远程桌面重新手动启动FoundryVTT。
+· 存储在本地的资源可直接使用<kbd>ctrl+C</kbd>，<kbd>ctrl+V</kbd>命令复制到远程桌面文件夹中。
+
+### 创建远程桌面登陆快捷方式
+
+如果你不想每次都点击`运行`来连接你的远程桌面，那么可以为其创建一个快捷登陆方式（.RDP文件）。
+（某些服务器运营商后台就提供RDP文件下载，如果没有，你可以按照下面的方法创建一个。）
+
+首先，还是`运行`→`mstsc`，点击确定打开下一级对话框。
+	- ![](/images/deployment/winserver/00-connect.png)
+点击左下角的`显示选项`，在下方`连接设置`栏目中，选择`另存为..`，保存RDP到你的桌面或任意文件夹中。
+下次你想要登陆你的远程桌面时，双击打开这个RDP文件即可立即连接。
+
+### 创建守护进程
+
+如果你对修改程序的需求比较多，可以创建一个守护进程，这样当你执行某些操作(比如修改端口)需要关闭服务器上的FoundryVTT端时，就不用再登录到远程桌面进行手动重启操作了。
+
+打开C盘主目录，新建一个文本文档，内容如下：
+```bash
+@echo off
+title RabbitMQ-Daemons-exe
+rem 定义循环间隔时间和监测的服务：
+set secs=10
+set exename="FoundryVTT.exe"
+set exepath="C:\FoundryVTT\FoundryVTT.exe"
+ 
+echo Daemons-exe is : %exename%
+ 
+if %exename%. == . goto end
+:chkit
+set svrst=0
+for /f %%i in ('tasklist') do if /I "%%i" == %exename% set svrst=1
+rem 如果不是管理员就无法启动
+if %svrst% == 0 start "" %exepath% start taskkill /f /im cmd.exe
+set svrst=
+rem 下面的命令用于延时，否则可能会导致cpu单个核心满载。
+ping -n %secs% 127.0.0.1 > nul
+goto chkit
+```
+`seces=10`	为重新检查的间隔，默认为10秒
+`exepath=""`	这里为你的FVTT程序路径
+
+保存文本文档，重命名为`autorun.bat`，然后运行此bat即可。
+[参考文章](https://blog.csdn.net/qq_18671415/article/details/111640477?utm_medium=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase&depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase)
+
+
+### Node.js版本
+---
+
 1. 下载并安装 Node.js，在 [Node.js 官网安装页面](https://nodejs.org/zh-cn/download/)上，点击 Windows 安装包下载
 2. 将 Node.js 安装包通过 *远程桌面* 复制到服务器上，然后在服务器上点击安装包文件，一路确认，安装 Node.js
 3. 从 [Foundry VTT 官网](https://foundryvtt.com/)上下载最新包，使用 Node.js 部署，所以选择第四项
