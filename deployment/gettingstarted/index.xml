@@ -711,73 +711,73 @@ allowfullscreen="true">
 &lt;hr>
 &lt;h2 id="选择你的安装方式">选择你的安装方式&lt;/h2>
 &lt;p>首先，你得租用一台云服务器。不管运营商是阿里云、腾讯云还是百度云，同系统的操作都是一样的。本教程使用的是腾讯云服务器。&lt;/p>
-&lt;p>FoundryVTT在Windows服务器上有两种部署方式：1是使用exe版本直接安装，2是使用Node.js版本进行安装。
-二者相较起来，exe版本比较接近平时的Windows使用操作，适合刚入门的初学者；Node.js版本需要一些指令操作，适合有一定基础的用户。
+&lt;p>FoundryVTT 在 Windows 服务器上有两种部署方式：1 是使用 EXE 版本直接安装；2 是使用 Node.js 版本进行安装。
+二者相较起来，EXE 版本比较接近平时的 Windows 使用操作，适合刚入门的初学者；Node.js 版本需要一些指令操作，适合有一定基础的用户。
 在实际的测试中，二者不存在实际的性能差距，仅仅是操作和运行方式不同，所以请不要担心。&lt;/p>
-&lt;h3 id="exe版本">exe版本&lt;/h3>
+&lt;h3 id="exe-版本">EXE 版本&lt;/h3>
 &lt;hr>
 &lt;ol>
 &lt;li>
-&lt;p>进入你的服务器运营商网页后台，设置你的远程连接密码。&lt;/p>
+&lt;p>进入你的服务器运营商网页后台，设置你的远程连接密码&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>在&lt;a href="https://foundryvtt.com/">Foundry VTT 官网&lt;/a>下载FoundryVTT的.exe安装包，右键&lt;code>复制&lt;/code>（或&lt;kbd>Ctrl+C&lt;/kbd>）。&lt;/p>
+&lt;p>在&lt;a href="https://foundryvtt.com/">Foundry VTT 官网&lt;/a>下载 FoundryVTT 的 &lt;code>.exe&lt;/code> 安装包，右键&lt;code>复制&lt;/code>（或&lt;kbd>Ctrl+C&lt;/kbd>）&lt;/p>
 &lt;ul>
 &lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/03-download.png" alt="">&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>在你的桌面上右键&lt;code>开始&lt;/code>→&lt;code>运行&lt;/code>（或者按&lt;code>win+R&lt;/code>），输入&lt;code>mstsc&lt;/code>，确定。&lt;/p>
+&lt;p>在你的桌面上右键 &lt;code>开始&lt;/code> → &lt;code>运行&lt;/code>（或者按 &lt;kbd>Win+R&lt;/kbd>），输入 &lt;code>mstsc&lt;/code>，确定&lt;/p>
 &lt;ul>
 &lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/00-connect.png" alt="">&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>输入&lt;code>你的服务器IP&lt;/code>连接。&lt;/p>
+&lt;p>输入 &lt;code>你的服务器IP&lt;/code> 连接&lt;/p>
 &lt;ul>
 &lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/01-mstsc.png" alt="">&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>输入&lt;code>你的登录密码&lt;/code>确定，进入服务器远程桌面。&lt;/p>
+&lt;p>输入 &lt;code>你的登录密码&lt;/code> 确定，进入服务器远程桌面&lt;/p>
 &lt;ul>
 &lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/02-password.png" alt="">&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>打开C盘，右键粘贴（或&lt;kbd>Ctrl+V&lt;/kbd>）你刚才复制的FoundryVTT.exe安装包，双击安装。&lt;/p>
+&lt;p>打开 &lt;code>C&lt;/code> 盘，右键粘贴（或&lt;kbd>Ctrl+V&lt;/kbd>）你刚才复制的 &lt;code>FoundryVTT.exe&lt;/code> 安装包，双击安装&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>安装完成后，双击桌面图标运行FVTT，输入授权KEY，然后点击&lt;code>agree&lt;/code>同意安装协议。&lt;/p>
+&lt;p>安装完成后，双击桌面图标运行 FVTT，输入授权 KEY，然后点击 &lt;code>agree&lt;/code> 同意安装协议&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>右键&lt;code>开始&lt;/code>→&lt;code>运行&lt;/code>（或者按&lt;code>win+R&lt;/code>）,输入&lt;code>firewall.cpl&lt;/code>，打开&lt;code>Windows Defender 防火墙&lt;/code>，点击左方&lt;code>允许应用或功能通过windows defender防火墙&lt;/code>。&lt;/p>
+&lt;p>右键 &lt;code>开始&lt;/code> → &lt;code>运行&lt;/code>（或者按 &lt;kbd>Win+R&lt;/kbd>）,输入 &lt;code>firewall.cpl&lt;/code>，打开 &lt;code>Windows Defender 防火墙&lt;/code>，点击左方 &lt;code>允许应用或功能通过 Windows Defender 防火墙&lt;/code>&lt;/p>
 &lt;ul>
 &lt;li>&lt;img src="https://fvtt-cn.github.io/images/deployment/winserver/firewalls2.png" alt="">&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ol>
-&lt;p>在列表中找到&lt;code>FoundryVTT&lt;/code>，勾选右边的两个选项，然后保存。
-（如果列表中没有，点击&lt;code>允许其他应用&lt;/code>并添加FoundryVTT）&lt;/p>
+&lt;p>在列表中找到 &lt;code>FoundryVTT&lt;/code>，勾选右边的两个选项，然后保存。
+（如果列表中没有，点击 &lt;code>允许其他应用&lt;/code> 并添加 FoundryVTT）&lt;/p>
 &lt;p>到这里，你就部署成功啦~（撒花）
-现在你可以关闭远程桌面，在你的电脑上使用浏览器访问&lt;code>你的服务器IP:30000&lt;/code>，就能直接使用FVTT了！&lt;/p>
+现在你可以关闭远程桌面，在你的电脑上使用浏览器访问 &lt;code>http://[服务器IP]:30000&lt;/code>，就能直接使用FVTT了！&lt;/p>
 &lt;p>注意事项：&lt;/p>
 &lt;ul>
-&lt;li>即使关闭远程桌面，只要FoundryVTT程序还在运行着就可以使用。&lt;/li>
-&lt;li>某些选项会让你重启FoundryVTT程序，若程序关闭了，此时你需要登录到远程桌面重新手动启动FoundryVTT。&lt;/li>
-&lt;li>存储在本地的资源可直接使用&lt;kbd>ctrl+C&lt;/kbd>，&lt;kbd>ctrl+V&lt;/kbd>命令复制到远程桌面文件夹中。&lt;/li>
+&lt;li>即使关闭远程桌面，只要 FoundryVTT 程序还在运行着就可以使用。&lt;/li>
+&lt;li>某些选项会让你重启 FoundryVTT 程序，若程序关闭了，此时你需要登录到远程桌面重新手动启动 FoundryVTT。&lt;/li>
+&lt;li>存储在本地的资源可直接使用 &lt;kbd>Ctrl+C&lt;/kbd>, &lt;kbd>Ctrl+V&lt;/kbd> 命令复制到远程桌面文件夹中。&lt;/li>
 &lt;/ul>
 &lt;h3 id="创建远程桌面登陆快捷方式">创建远程桌面登陆快捷方式&lt;/h3>
-&lt;p>如果你不想每次都点击&lt;code>运行&lt;/code>来连接你的远程桌面，那么可以为其创建一个快捷登陆方式（.RDP文件）。
-（某些服务器运营商后台就提供RDP文件下载，如果没有，你可以按照下面的方法创建一个。）&lt;/p>
-&lt;p>首先，还是&lt;code>运行&lt;/code>→&lt;code>mstsc&lt;/code>，点击确定打开下一级对话框。&lt;/p>
+&lt;p>如果你不想每次都点击 &lt;code>运行&lt;/code> 来连接你的远程桌面，那么可以为其创建一个快捷登陆方式（&lt;code>.RDP&lt;/code> 文件）。
+（某些服务器运营商后台就提供 RDP 文件下载，如果没有，你可以按照下面的方法创建一个。）&lt;/p>
+&lt;p>首先，还是 &lt;code>运行&lt;/code> → &lt;code>mstsc&lt;/code>，点击确定打开下一级对话框。&lt;/p>
 &lt;pre>&lt;code>- ![](/images/deployment/winserver/01-mstsc.png)
 &lt;/code>&lt;/pre>
-&lt;p>点击左下角的&lt;code>显示选项&lt;/code>，在下方&lt;code>连接设置&lt;/code>栏目中，选择&lt;code>另存为..&lt;/code>，保存RDP到你的桌面或任意文件夹中。
+&lt;p>点击左下角的 &lt;code>显示选项&lt;/code>，在下方 &lt;code>连接设置&lt;/code> 栏目中，选择 &lt;code>另存为..&lt;/code>，保存RDP到你的桌面或任意文件夹中。
 下次你想要登陆你的远程桌面时，双击打开这个RDP文件即可立即连接。&lt;/p>
 &lt;h3 id="创建值守进程">创建值守进程&lt;/h3>
-&lt;p>如果你对修改程序的需求比较多，可以创建一个值守进程，这样当你执行某些操作(比如修改端口)需要关闭服务器上的FoundryVTT端时，就不用再登录到远程桌面进行手动重启操作了。&lt;/p>
-&lt;p>打开C盘主目录，新建一个文本文档，内容如下：&lt;/p>
+&lt;p>如果你对修改程序的需求比较多，可以创建一个值守进程，这样当你执行某些操作（比如修改端口）需要关闭服务器上的 FoundryVTT 端时，就不用再登录到远程桌面进行手动重启操作了。&lt;/p>
+&lt;p>打开 &lt;code>C&lt;/code> 盘主目录，新建一个文本文档，内容如下：&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">@echo off
 title RabbitMQ-Daemons-exe
 rem 定义循环间隔时间和监测的服务：
@@ -796,10 +796,10 @@ rem 下面的命令用于延时，否则可能会导致cpu单个核心满载。
 ping -n %secs% 127.0.0.1 &amp;gt; nul
 goto chkit
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>seces=10&lt;/code> 为重新检查的间隔，默认为10秒
-&lt;code>exepath=&amp;quot;&amp;quot;&lt;/code> 这里为你的FVTT程序路径&lt;/p>
-&lt;p>保存文本文档，重命名为&lt;code>autorun.bat&lt;/code>，然后运行此bat即可。
+&lt;code>exepath=&amp;quot;&amp;quot;&lt;/code> 这里为你的 FVTT 程序路径&lt;/p>
+&lt;p>保存文本文档，重命名为 &lt;code>autorun.bat&lt;/code>，然后运行此 BAT 即可。
 &lt;a href="https://blog.csdn.net/qq_18671415/article/details/111640477?utm_medium=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase&amp;amp;depth_1-utm_source=distribute.pc_relevant_download.none-task-blog-baidujs-2.nonecase">参考文章&lt;/a>&lt;/p>
-&lt;h3 id="nodejs版本">Node.js版本&lt;/h3>
+&lt;h3 id="nodejs-版本">Node.js 版本&lt;/h3>
 &lt;hr>
 &lt;ol>
 &lt;li>下载并安装 Node.js，在 &lt;a href="https://nodejs.org/zh-cn/download/">Node.js 官网安装页面&lt;/a>上，点击 Windows 安装包下载&lt;/li>
