@@ -32,7 +32,7 @@ Foundry VTT 目前拥有若干个来自不同用户实现的 Dockerfile，这些
     - 你无需了解什么是 root 权限，云服务通常会提供；如果确认无法获取，可咨询客服
 2. 下载脚本
     ```bash
-    wget -O fvtt.sh https://gitee.com/mitchx7/FoundryDeploy/raw/master/fvtt.sh && sudo chmod +x fvtt.sh
+    wget -O fvtt.sh https://fvtt-cn.coding.net/p/FoundryDeploy/d/FoundryDeploy/git/raw/master/fvtt.sh && sudo chmod +x fvtt.sh
     ```
 3. 运行脚本，进行安装
     ```bash
@@ -98,7 +98,7 @@ Docker 容器为了保证运行时文件尽量不受改动，避免在不同时�
 #### 更新脚本
 更新脚本和下载脚本命令相同，粘贴执行以下命令：
 ```bash
-wget -O fvtt.sh https://gitee.com/mitchx7/FoundryDeploy/raw/master/fvtt.sh && sudo chmod +x fvtt.sh
+wget -O fvtt.sh https://fvtt-cn.coding.net/p/FoundryDeploy/d/FoundryDeploy/git/raw/master/fvtt.sh && sudo chmod +x fvtt.sh
 ```
 
 #### 升级流程
