@@ -433,7 +433,7 @@ ProxyPassReverse / "&lt;em>&lt;u>https://yourdomain.com:30000/&lt;/u>&lt;/em>"
 &lt;/li>
 &lt;li>
 &lt;p>下载脚本&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget -O fvtt.sh https://gitee.com/mitchx7/FoundryDeploy/raw/master/fvtt.sh &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> sudo chmod +x fvtt.sh
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget -O fvtt.sh https://fvtt-cn.coding.net/p/FoundryDeploy/d/FoundryDeploy/git/raw/master/fvtt.sh &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> sudo chmod +x fvtt.sh
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;li>
 &lt;p>运行脚本，进行安装&lt;/p>
@@ -517,7 +517,7 @@ ProxyPassReverse / "&lt;em>&lt;u>https://yourdomain.com:30000/&lt;/u>&lt;/em>"
 &lt;p>&lt;strong>该方法不仅可以升级版本，还可以方便地用脚本重装同版本或者回退旧版本&lt;/strong>。&lt;/p>
 &lt;h4 id="更新脚本">更新脚本&lt;/h4>
 &lt;p>更新脚本和下载脚本命令相同，粘贴执行以下命令：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget -O fvtt.sh https://gitee.com/mitchx7/FoundryDeploy/raw/master/fvtt.sh &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> sudo chmod +x fvtt.sh
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">wget -O fvtt.sh https://fvtt-cn.coding.net/p/FoundryDeploy/d/FoundryDeploy/git/raw/master/fvtt.sh &lt;span style="color:#ce5c00;font-weight:bold">&amp;amp;&amp;amp;&lt;/span> sudo chmod +x fvtt.sh
 &lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="升级流程">升级流程&lt;/h4>
 &lt;ol>
 &lt;li>
