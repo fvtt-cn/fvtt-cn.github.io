@@ -14,4 +14,99 @@
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="一键开启所有-mod">一键开启所有 MOD&lt;/h3>
 &lt;p>在世界中，管理 MOD 界面，也就是勾选 MOD 开启和关闭的窗口打开之后，按下 F12 弹出开发者工具，切换到控制台，输入脚本并回车。&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#204a87">document&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">querySelectorAll&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#4e9a06">&amp;#34;input[type=checkbox]&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">).&lt;/span>&lt;span style="color:#000">forEach&lt;/span>&lt;span style="color:#000;font-weight:bold">(&lt;/span>&lt;span style="color:#000">x&lt;/span> &lt;span style="color:#000;font-weight:bold">=&amp;gt;&lt;/span> &lt;span style="color:#000">x&lt;/span>&lt;span style="color:#000;font-weight:bold">.&lt;/span>&lt;span style="color:#000">checked&lt;/span> &lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span> &lt;span style="color:#204a87;font-weight:bold">true&lt;/span>&lt;span style="color:#000;font-weight:bold">);&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后点击保存即可。&lt;/p></description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后点击保存即可。&lt;/p></description></item><item><title>Tutorial: 导入与导出数据</title><link>https://fvtt-cn.github.io/tutorial/gm/share/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://fvtt-cn.github.io/tutorial/gm/share/</guid><description>
+&lt;p>有时候，你想要导出你的数据分享给其他 GM，亦或者是为自己制作备份。&lt;/p>
+&lt;h2 id="windows-版本操作">Windows 版本操作&lt;/h2>
+&lt;h3 id="世界world">世界（world）&lt;/h3>
+&lt;p>（在本地/网络服务器的文件管理器中）
+要导出世界，找到你的数据目录，例如 &lt;code>C:/FoundryVTTdata/Data/World/&lt;/code>，找到你所创建的世界，复制后粘贴出来即可。
+导入预设世界（比如别人做好的模组世界）时，把文件夹拷贝到数据目录即可。&lt;/p>
+&lt;h3 id="角色物品日志随机表actoritemjournalrolltable">角色、物品、日志、随机表（Actor、Item、Journal、RollTable）&lt;/h3>
+&lt;p>（在 FVTT 中）
+创建一个新角色，右键角色，选择&lt;code>导出数据&lt;/code>，保存 &lt;code>json&lt;/code> 文件。
+在需要导入的 FVTT 世界中，新建一个角色（随意命名即可），右键&lt;code>导入数据&lt;/code>，选择你所保存出来的 &lt;code>json&lt;/code> 文件，导入。
+其他类型（物品、日志、随机表）同样。&lt;/p>
+&lt;h3 id="合集包companion">合集包（Companion）&lt;/h3>
+&lt;p>（在FVTT中）
+新建一个合集包（需要使用英文字符命名，例如 &lt;code>heroes&lt;/code>），将你所需要转移的条目拖动到此合集。&lt;/p>
+&lt;p>（在本地/网络服务器的文件管理器中）
+打开数据目录（例如 &lt;code>C:/FoundryVTTdata/Data/World/你的世界/packs&lt;/code>），你可以找到刚才生成的 &lt;code>.db&lt;/code> 文件。(例如 &lt;code>heroes.db&lt;/code>)
+将此.db文件复制并粘贴到你的备份目录即可。&lt;/p>
+&lt;h4 id="当你需要导入此合集包时">当你需要导入此合集包时：&lt;/h4>
+&lt;p>打开数据目录（例如 &lt;code>C:/FoundryVTTdata/Data/World/你的世界/packs&lt;/code>），如果没有 packs，新建一个。
+将你需要导入的合集包数据文件（例如 &lt;code>heroes.db&lt;/code>）复制粘贴到此目录。
+使用文本编辑器（比如记事本）编辑你的世界中 &lt;code>world.json&lt;/code>。
+修改/添加以下字段。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json"> &lt;span style="color:#4e9a06">&amp;#34;packs&amp;#34;&lt;/span>&lt;span style="color:#a40000">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;label&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;新手团的PC角色&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">显示在合集中的标题名&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;entity&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Actor&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">实体类型，只能填已有实体名不然会报错（例：Actor,&lt;/span> &lt;span style="color:#a40000">Item,&lt;/span> &lt;span style="color:#a40000">JournalEntry,&lt;/span> &lt;span style="color:#a40000">RollTable,&lt;/span> &lt;span style="color:#a40000">Macro)&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;heroes&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">名称&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;packs/heroes.db&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">实际路径&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;system&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;dnd5e&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">使用的规则系统，可在&lt;/span> &lt;span style="color:#a40000">system&lt;/span> &lt;span style="color:#a40000">中查看对应的&lt;/span> &lt;span style="color:#a40000">system.json&lt;/span> &lt;span style="color:#a40000">确定&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;package&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;world&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;absPath&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;D:\\TRPG-F\\Data\\worlds\\test\\packs\\heroes.db&amp;#34;&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">绝对路径，根据你的服务器情况修改&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#000;font-weight:bold">]&lt;/span>&lt;span style="color:#a40000">,&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果导入多个 db ，则为每个 db 单独写一段。注意每个 &lt;code>}&lt;/code> 后面需要有一个 &lt;code>,&lt;/code> 符号，最后一个 &lt;code>}&lt;/code> 不能有 &lt;code>,&lt;/code> 符号。比如：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json"> &lt;span style="color:#4e9a06">&amp;#34;packs&amp;#34;&lt;/span>&lt;span style="color:#a40000">:&lt;/span> &lt;span style="color:#000;font-weight:bold">[&lt;/span>
+&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;label&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;新手团的PC角色&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;entity&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Actor&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;packs/heroes.db&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;system&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;dnd5e&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;package&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;world&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;absPath&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;D:\\TRPG-F\\Data\\worlds\\test\\packs\\heroes.db&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">},&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">注意此处有符号(&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>&lt;span style="color:#a40000">)英文半角&lt;/span>
+&lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;label&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;新手团的PC角色2&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;entity&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;Actor&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;name&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;path&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;packs/heros2.db&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;system&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;dnd5e&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;package&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;world&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">,&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">&amp;#34;absPath&amp;#34;&lt;/span>&lt;span style="color:#000;font-weight:bold">:&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;D:\\TRPG-F\\Data\\worlds\\test\\packs\\heroes2.db&amp;#34;&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span> &lt;span style="color:#a40000">//&lt;/span> &lt;span style="color:#a40000">注意此处没有符号&lt;/span>
+&lt;span style="color:#000;font-weight:bold">]&lt;/span>&lt;span style="color:#a40000">,&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="制作即插即用式合集包本地mod">制作即插即用式合集包（本地MOD）&lt;/h3>
+&lt;p>如果你觉得这么做太过于麻烦，也可以考虑以MOD的形式来保存与分享你制作的合集包。&lt;/p>
+&lt;p>首先，在任意位置新建一个文件夹，命名为 &lt;code>my_data&lt;/code>。
+将你创建的合集包数据（比如 &lt;code>heroes.db&lt;/code>）复制到此文件夹下。
+新建一个文本文档，写入以下数据：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#ce5c00;font-weight:bold">{&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;my_data&amp;#34;&lt;/span>, // 此处需要与你的文件夹同名，仅限英文
+&lt;span style="color:#4e9a06">&amp;#34;title&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;我的合集包数据&amp;#34;&lt;/span>, // 在 FVTT mod 管理器中显示的合集包标题
+&lt;span style="color:#4e9a06">&amp;#34;description&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;我的合集包数据，包含几个适合新手的角色，分享给大家&amp;#34;&lt;/span>, // 在 FVTT mod 管理器中显示的合集包描述
+&lt;span style="color:#4e9a06">&amp;#34;version&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;0.1.0&amp;#34;&lt;/span>, // 随便填
+&lt;span style="color:#4e9a06">&amp;#34;minimumCoreVersion&amp;#34;&lt;/span> : &lt;span style="color:#4e9a06">&amp;#34;0.7.0&amp;#34;&lt;/span>, // 支持最低核心版本，建议 0.7.0
+&lt;span style="color:#4e9a06">&amp;#34;author&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;我&amp;#34;&lt;/span>, // 作者名
+&lt;span style="color:#4e9a06">&amp;#34;scripts&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>, // 留空
+&lt;span style="color:#4e9a06">&amp;#34;styles&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">[]&lt;/span>, // 留空
+&lt;span style="color:#4e9a06">&amp;#34;packs&amp;#34;&lt;/span>: &lt;span style="color:#ce5c00;font-weight:bold">[{&lt;/span>
+&lt;span style="color:#4e9a06">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;我的英雄&amp;#34;&lt;/span>, // 在FVTT世界中显示的合集包标题
+&lt;span style="color:#4e9a06">&amp;#34;label&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;我的英雄&amp;#34;&lt;/span>, // 在FVTT世界中显示的合集包标签
+&lt;span style="color:#4e9a06">&amp;#34;path&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;heroes.db&amp;#34;&lt;/span>, // 数据文件名称
+&lt;span style="color:#4e9a06">&amp;#34;module&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;my_data&amp;#34;&lt;/span>, // 此处需要与你的文件夹同名，仅限英文
+&lt;span style="color:#4e9a06">&amp;#34;entity&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;Actor&amp;#34;&lt;/span> // 合集包类型，必须是已存在的指定类型，看上文
+&lt;span style="color:#ce5c00;font-weight:bold">}]&lt;/span>,
+&lt;span style="color:#4e9a06">&amp;#34;url&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;https://github.com/my_data&amp;#34;&lt;/span>, // 随意填
+&lt;span style="color:#4e9a06">&amp;#34;manifest&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span>, // 留空
+&lt;span style="color:#4e9a06">&amp;#34;download&amp;#34;&lt;/span>: &lt;span style="color:#4e9a06">&amp;#34;&amp;#34;&lt;/span> // 留空
+&lt;span style="color:#ce5c00;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>包含多个 db 文件时，在 packs 中增加一段即可：(注意每个段末的&lt;code>},{&lt;/code>之间用&lt;code>,&lt;/code>分开，末尾段落无&lt;code>,&lt;/code>符号）&lt;/p>
+&lt;pre>&lt;code>&amp;quot;packs&amp;quot;: [{
+&amp;quot;name&amp;quot;: &amp;quot;我的英雄&amp;quot;,
+&amp;quot;label&amp;quot;: &amp;quot;我的英雄&amp;quot;,
+&amp;quot;path&amp;quot;: &amp;quot;heroes.db&amp;quot;,
+&amp;quot;module&amp;quot;: &amp;quot;my_data&amp;quot;,
+&amp;quot;entity&amp;quot;: &amp;quot;Actor&amp;quot;
+},{
+&amp;quot;name&amp;quot;: &amp;quot;我的法术&amp;quot;,
+&amp;quot;label&amp;quot;: &amp;quot;我的法术&amp;quot;,
+&amp;quot;path&amp;quot;: &amp;quot;spells.db&amp;quot;,
+&amp;quot;module&amp;quot;: &amp;quot;my_data&amp;quot;,
+&amp;quot;entity&amp;quot;: &amp;quot;Item&amp;quot;
+}],
+&lt;/code>&lt;/pre>&lt;p>将此文本文档重命名为 &lt;code>module.json&lt;/code>，然后你就可以将此文件夹打包发送给其他人了。
+安装方式如同基本的手动 MOD 安装，在开启世界后在 MOD 设置中启用此 MOD 即可。&lt;/p></description></item></channel></rss>
