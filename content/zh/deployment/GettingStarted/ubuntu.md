@@ -30,8 +30,8 @@ Ubuntu 服务器上运行 FVTT，需要配置好运行环境：
 
 运行下面命令（适用于 Ubuntu，其他 Linux 发行版使用的命令可能不一致）：
 ```bash
-curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
-sudo apt install -y nodejs unzip
+curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+sudo apt install -y libssl-dev nodejs unzip
 ```
 以上命令会安装 node.js 以及包管理器 npm。使用 `node --version` 和 `npm --version` 来确认安装是否成功以及版本号。
 
