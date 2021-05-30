@@ -165,8 +165,8 @@
 &lt;p>首先，假设已经登入了 Ubuntu Server 服务器，并且能够获得 root 权限。&lt;/p>
 &lt;h3 id="第一步安装-nodejs-npm-和-unzip">第一步：安装 Node.js, npm 和 Unzip&lt;/h3>
 &lt;p>运行下面命令（适用于 Ubuntu，其他 Linux 发行版使用的命令可能不一致）：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -sL https://deb.nodesource.com/setup_12.x &lt;span style="color:#000;font-weight:bold">|&lt;/span> sudo bash -
-sudo apt install -y nodejs unzip
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">curl -sL https://deb.nodesource.com/setup_14.x &lt;span style="color:#000;font-weight:bold">|&lt;/span> sudo bash -
+sudo apt install -y libssl-dev nodejs unzip
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>以上命令会安装 node.js 以及包管理器 npm。使用 &lt;code>node --version&lt;/code> 和 &lt;code>npm --version&lt;/code> 来确认安装是否成功以及版本号。&lt;/p>
 &lt;h3 id="第二步安装-caddy">第二步：安装 Caddy&lt;/h3>
 &lt;p>运行以下命令将会安装 Caddy：&lt;/p>
