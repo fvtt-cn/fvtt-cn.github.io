@@ -603,46 +603,42 @@ allowfullscreen="true">
 &lt;p>境内服务器更容易出现该错误，当网络出现波动，多次尝试后仍然无法成功下载 Docker 镜像后，即报此错。&lt;/p>
 &lt;p>报错退出后，可以在再次执行脚本部署命令前，通过手动拉取解决该问题：&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo docker pull ...
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>将 &lt;code>...&lt;/code> 替换为拉取失败的镜像，镜像名称参见下表，境内服务器使用 &lt;code>USTC 源镜像名&lt;/code> 一列：&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>将 &lt;code>...&lt;/code> 替换为拉取失败的镜像，镜像名称参见下表：&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>报错名&lt;/th>
-&lt;th>USTC 源镜像名&lt;/th>
 &lt;th>官方源镜像名&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>FoundryVTT&lt;/td>
-&lt;td>docker.mirrors.ustc.edu.cn/felddy/foundryvtt:release&lt;/td>
 &lt;td>felddy/foundryvtt:release&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Caddy&lt;/td>
-&lt;td>docker.mirrors.ustc.edu.cn/library/caddy&lt;/td>
 &lt;td>library/caddy&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>FileBrowser&lt;/td>
-&lt;td>docker.mirrors.ustc.edu.cn/filebrowser/filebrowser:alpine&lt;/td>
 &lt;td>filebrowser/filebrowser:alpine&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Portainer&lt;/td>
-&lt;td>docker.mirrors.ustc.edu.cn/portainer/portainer-ce&lt;/td>
 &lt;td>portainer/portainer-ce&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>ImageOptim&lt;/td>
-&lt;td>docker.mirrors.ustc.edu.cn/hmqgg/image_optim&lt;/td>
 &lt;td>hmqgg/image_optim&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>拉取成功后，再执行脚本部署命令。&lt;/p>
-&lt;p>如果手动拉取 USTC 源镜像，但也始终提示 &lt;code>Error response from ...&lt;/code> 无法成功拉取对应镜像，可以考虑更换为官方源（境内下载偏慢）。如果这样做，执行脚本部署命令需要加上 &lt;code>FORCE_GLO=true&lt;/code>，改为：&lt;/p>
+&lt;p>如果手动拉取镜像，但也始终提示 &lt;code>Error response from ...&lt;/code> 无法成功拉取对应镜像，可以考虑更换为官方源（境内下载偏慢）。如果这样做，执行脚本部署命令需要加上 &lt;code>FORCE_GLO=true&lt;/code>，改为：&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo &lt;span style="color:#000">FORCE_GLO&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#204a87">true&lt;/span> ./fvtt.sh
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果手动拉取后仍然因为网络连接不稳定导致部署容易出错，可以加上脚本设置的跳过拉取变量，改为：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">sudo &lt;span style="color:#000">PULL_SKIP&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#204a87">true&lt;/span> ./fvtt.sh
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;em>更新时同理，在后面添加&lt;/em> &lt;code>recreate&lt;/code> 变为 &lt;code>sudo FORCE_GLO=true ./fvtt.sh recreate&lt;/code>。&lt;/p>
 &lt;hr>
 &lt;div class="alert alert-primary" role="alert">
