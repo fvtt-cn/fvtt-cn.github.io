@@ -169,22 +169,28 @@ sudo rm fvtt-config
 ```bash
 sudo docker pull ...
 ```
-将 `...` 替换为拉取失败的镜像，镜像名称参见下表，境内服务器使用 `USTC 源镜像名` 一列：
+将 `...` 替换为拉取失败的镜像，镜像名称参见下表：
 
-| 报错名 | USTC 源镜像名 | 官方源镜像名 |
-| ----  | ----  | ---- |
-| FoundryVTT | docker.mirrors.ustc.edu.cn/felddy/foundryvtt:release | felddy/foundryvtt:release |
-| Caddy | docker.mirrors.ustc.edu.cn/library/caddy | library/caddy |
-| FileBrowser | docker.mirrors.ustc.edu.cn/filebrowser/filebrowser:alpine | filebrowser/filebrowser:alpine |
-| Portainer | docker.mirrors.ustc.edu.cn/portainer/portainer-ce | portainer/portainer-ce |
-| ImageOptim | docker.mirrors.ustc.edu.cn/hmqgg/image_optim | hmqgg/image_optim |
+| 报错名 | 官方源镜像名 |
+| ----  | ---- |
+| FoundryVTT | felddy/foundryvtt:release |
+| Caddy | library/caddy |
+| FileBrowser | filebrowser/filebrowser:alpine |
+| Portainer | portainer/portainer-ce |
+| ImageOptim | hmqgg/image_optim |
 
 拉取成功后，再执行脚本部署命令。
 
-如果手动拉取 USTC 源镜像，但也始终提示 `Error response from ...` 无法成功拉取对应镜像，可以考虑更换为官方源（境内下载偏慢）。如果这样做，执行脚本部署命令需要加上 `FORCE_GLO=true`，改为：
+如果手动拉取镜像，但也始终提示 `Error response from ...` 无法成功拉取对应镜像，可以考虑更换为官方源（境内下载偏慢）。如果这样做，执行脚本部署命令需要加上 `FORCE_GLO=true`，改为：
 ```bash
 sudo FORCE_GLO=true ./fvtt.sh
 ```
+如果手动拉取后仍然因为网络连接不稳定导致部署容易出错，可以加上脚本设置的跳过拉取变量，改为：
+
+```bash
+sudo PULL_SKIP=true ./fvtt.sh
+```
+
 *更新时同理，在后面添加* `recreate` 变为 `sudo FORCE_GLO=true ./fvtt.sh recreate`。
 
 ---
