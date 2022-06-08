@@ -18,10 +18,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: Checkout Repo
+    - name: Checkout
       uses: actions/checkout@v2
       with:
         submodules: 'recursive'
+
+    - name: Install Deps
+      run: npm install -g postcss-cli
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
