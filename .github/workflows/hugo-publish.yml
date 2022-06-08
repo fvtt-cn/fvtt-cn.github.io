@@ -24,7 +24,7 @@ jobs:
         submodules: 'recursive'
 
     - name: Install Deps
-      run: npm install -g postcss-cli
+      run: npm install -g postcss postcss-cli autoprefixer
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
